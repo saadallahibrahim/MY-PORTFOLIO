@@ -35,8 +35,8 @@ html{
 }
 .landing > .container{
     width: 90%;
-    padding: 5% 5%;
-    min-height: 70vh;
+    padding: 3% 2%;
+    min-height: 50vh;
     display: block;
     background-color: transparent;
 }
@@ -60,11 +60,13 @@ html{
 .landing > .container > .headings > h2{
     font-family: var(--fontfamily);
     font-size: 1.3rem;
-    color: var(--color);
+    color: rgb(160, 153, 153);
     letter-spacing: var(--letter-spacing);
     text-transform: var(--text-transform);
 }
 .landing > .container > .headings > h2 > span{
+    color: var(--color);
+    letter-spacing: var(--letter-spacing);
     padding: 5px 1%;
     border-bottom: 2px solid purple;
 }
@@ -77,6 +79,7 @@ html{
     align-items: center;
     background-color: transparent;
     margin-top: 4%;
+    margin-bottom: 5%;
 }
 
 .landing > .container > .navbars >  .navbar > ul{
@@ -86,7 +89,7 @@ html{
 
 .landing > .container > .navbars > .navbar{
     width: 100%;
-    display: flex;
+    display: block;
     background: transparent;
     justify-content: left;
     align-items: center;
@@ -99,21 +102,21 @@ html{
     font-family: var(--fontfamily);
     font-size: var(--fontsize);
     letter-spacing: var(--letter-spacing);
-    color: var(--color);
+    color: rgb(160, 153, 153);
     text-decoration: none;
     text-transform: var(--text-transform);
-    font-weight: 600;
+    font-weight: var(--font-weight);
     position: relative;
 }
 
 
 .landing > .container > .navbars > .navbar > ul > li > a::before{
     content: '';
-    width: 100%;
+    width: 50%;
     height: 2px;
     left: 0;
     bottom: 0;
-    background-color: var(--color2);
+    background-color: var(--background-color);
     position: absolute;
     transform: scaleX(0);
     transform-origin: right;
