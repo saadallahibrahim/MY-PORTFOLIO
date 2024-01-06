@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --fontfamily: 'Poppins', sans;
+    --fontsize: 1rem;
+    --fontsize2: 2rem;
+    --color: #fff;
+    --text-transform: capitalize;
+    --letter-spacing: 2px;
+    --font-weight: bolder;
+    --background-color: purple;
+    --transition: 0.5s;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+/* the style for landing start here*/
+
+.landing{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(19, 18, 18, 0.712), rgba(14, 13, 13, 0.614)), url(../IMAGES/background.jpg);
+    background-position: center;
+    background-size: contain;
+}
+.landing > .container{
+    width: 90%;
+    padding: 5% 4%;
+    min-height: 70vh;
+    display: block;
+    
+    background-color: transparent;
+}
+
+.landing > .container > .headings{
+    width: 70%;
+    padding: 1% 2%;
+    background: transparent;
+}
+
+.landing > .container > .headings > h1{
+    font-family: var(--fontfamily);
+    font-size: 3rem;
+    font-weight: var(--font-weight);
+    letter-spacing: 1px;
+    text-transform: var(--text-transform);
+    color: var(--color);
+}
+
+.landing > .container > .headings > h2{
+    font-family: var(--fontfamily);
+    font-size: 1.2rem;
+    color: var(--color);
+    letter-spacing: var(--letter-spacing);
+    text-transform: var(--text-transform);
+}
+.landing > .container > .headings > h2 > span{
+    padding: 5px 1%;
+    border-bottom: 2px solid purple;
+}
+
+/* the style for landing end here*/
