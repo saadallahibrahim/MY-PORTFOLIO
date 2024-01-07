@@ -26,7 +26,7 @@ html{
 .landing{
     width: 100%;
     min-height: 100vh;
-    display: flex;
+    display: inline-block;
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(rgba(19, 18, 18, 0.712), rgba(14, 13, 13, 0.614)), url(../IMAGES/background.jpg);
@@ -34,11 +34,14 @@ html{
     background-size: contain;
 }
 .landing > .container{
-    width: 90%;
+    width: 100%;
     padding: 3% 2%;
-    min-height: 50vh;
+    min-height: 90vh;
+    padding: 9% 10%;
     display: block;
-    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    background-color:  transparent;
 }
 
 .landing > .container > .headings{
@@ -78,8 +81,8 @@ html{
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    margin-top: 4%;
-    margin-bottom: 5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 .landing > .container > .navbars >  .navbar > ul{
@@ -94,6 +97,10 @@ html{
     justify-content: left;
     align-items: center;
     text-align: left;
+}
+
+.active{
+    color: yellow;
 }
 
 .landing > .container > .navbars >  .navbar > ul > li > a{
@@ -128,5 +135,51 @@ html{
     transform-origin: left;
 }
 
+.landing > .container > .icons{
+    display: flex;
+    width: 50%;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.landing > .container > .icons > a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        line-height: 1;
+        margin-right: 8px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        text-decoration: none;
+}
+
+.landing > .container > .icons > a:hover{
+    background: var(--background-color);
+    transition: var(--transition);
+}
+
 
 /* the style for landing end here*/
+
+/* footer start here */
+.landing > .footer{
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 3px;
+    text-align: right;
+    text-transform: var(--text-transform);
+    color: white;
+    font-family: var(--fontfamily);
+    font-size: 15px;
+    letter-spacing: var(--letter-spacing);
+
+}
+.landing > .footer > span{
+    color: var(--background-color);
+    font-weight: var(--font-weight);
+    margin-right: 5px;
+}
+/* footer ends here */
