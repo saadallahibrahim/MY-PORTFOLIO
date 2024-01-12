@@ -23,7 +23,7 @@ html{
 
 .header{
     width: 100%;
-    padding: 2% 3%;
+    padding: 1% 9%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,3 +32,63 @@ html{
     position: fixed;
     z-index: 100;
 }
+
+.header > .headings > h1{
+    color: white;
+    font-family: var(--fontfamily);
+    font-size: 2rem;
+    letter-spacing: var(--letter-spacing);
+    text-transform: var(--text-transform);
+}
+
+.header > .navbar > ul{
+    display: flex;
+    list-style: none;
+}
+
+.header > .navbar > ul > li > a{
+    padding: 5px;
+    margin-right: 23px;
+    font-size: 15px;
+    font-family: var(--fontfamily);
+    color: var(--color);
+    text-transform: var(--text-transform);
+    text-decoration: none;
+    position: relative;
+}
+
+.header > .navbar > ul > li > a::before{
+    content: '';
+    width: 50%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--background-color);
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition:transform .5s linear;
+}
+
+.header > .navbar > ul > li > a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* the header ends here */
+
+/* the landing start here */
+
+.landing{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(19, 18, 18, 0.712), rgba(14, 13, 13, 0.614)), url(../IMAGES/background.jpg);
+}
+
+
+
+
+/* the landing ends here */
