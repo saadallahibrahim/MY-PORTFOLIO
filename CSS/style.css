@@ -100,7 +100,7 @@ html{
 }
 
 .active{
-    color: yellow;
+    color: var(--background-color);
 }
 
 .landing > .container > .navbars >  .navbar > ul > li > a{
@@ -133,6 +133,10 @@ html{
 .landing > .container > .navbars > .navbar > ul > li > a:hover::before{
     transform: scaleX(1);
     transform-origin: left;
+}
+
+.landing > .container > .navbars > .navbar > ul > li > a:hover::before:active{
+    background-color: var(--background-color);
 }
 
 .landing > .container > .icons{

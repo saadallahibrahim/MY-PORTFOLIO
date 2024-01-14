@@ -70,10 +70,6 @@ html{
     transition:transform .5s linear;
 }
 
-.header > .navbar > ul > li > a:hover::before{
-    transform: scaleX(1);
-    transform-origin: left;
-}
 
 /* the header ends here */
 
@@ -87,6 +83,69 @@ html{
     align-items: center;
     background-image: linear-gradient(rgba(19, 18, 18, 0.712), rgba(14, 13, 13, 0.614)), url(../IMAGES/background.jpg);
 }
+
+.landing > .about-container{
+    display: block;
+    width: 90%;
+    min-height: 80vh;
+    margin-top: 10%;
+    background-color: black;
+    padding: 2%;
+}
+
+
+.landing > .about-container > .headings > h3{
+    width: 20%;
+    color: var(--color);
+    font-family: var(--fontfamily);
+    font-size: var(--fontsize);
+    text-transform: var(--text-transform);
+    margin-bottom: 1%;
+} 
+
+h3 > .line{
+    display: inline-block;
+    margin-left: 2%;
+    width: 30%;
+    height: 3px;
+    background: var(--background-color);
+}
+
+
+.landing > .about-container > .headings > h1{
+    font-family: var(--fontfamily);
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    color: var(--color);
+}
+
+.landing > .about-container > .content{
+    width: 95%;
+    height: 80%;
+    background: white;
+    
+}
+
+.landing > .about-container > .content > .content2 > .content3{
+    width: 100%;
+    display: inline-flex;
+}
+
+
+.landing > .about-container > .content > .content2 > .content3 > .image{
+    width: 33%;
+    height: 50%;
+    background-color: red;
+}
+.landing > .about-container > .content > .content2 > .content3 > .image > img{
+    width: 300px;
+    height: 300px;
+}
+
+.about-container > .content > .content2 > .content3 > .content4{
+    width: 50%;
+}
+
 
 
 
