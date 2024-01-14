@@ -122,7 +122,7 @@ h3 > .line{
 .landing > .about-container > .content{
     width: 95%;
     height: 80%;
-    background: white;
+    background: transparent;
     
 }
 
@@ -135,7 +135,8 @@ h3 > .line{
 .landing > .about-container > .content > .content2 > .content3 > .image{
     width: 33%;
     height: 50%;
-    background-color: red;
+    background-color: transparent;
+    margin-right: 2%;
 }
 .landing > .about-container > .content > .content2 > .content3 > .image > img{
     width: 300px;
@@ -143,9 +144,23 @@ h3 > .line{
 }
 
 .about-container > .content > .content2 > .content3 > .content4{
-    width: 50%;
+    width: 90%;
+    background-color: transparent;
+    
 }
 
+.about-container > .content > .content2 > .content3 > .content4 h1{
+    font-family: var(--fontfamily);
+    font-size: var(--fontsize2);
+    text-transform: var(--text-transform);
+    font-weight: var(--font-weight);
+    color: var(--background-color);
+    margin-bottom: 1%;
+}
+
+.about-container > .content > .content2 > .content3 > .content4 p{
+    color: var(--color);
+}
 
 
 
