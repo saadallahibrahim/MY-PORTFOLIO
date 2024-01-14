@@ -185,7 +185,7 @@ h3 > .line{
     margin-bottom: 5%;
     text-transform: var(--text-transform);
 }
-.contact > ul > li>strong{
+.contact > ul > li>.fa{
     color: var(--background-color);
     margin-right: 1%;
 }
