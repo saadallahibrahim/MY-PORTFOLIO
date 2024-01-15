@@ -266,10 +266,30 @@ h3 > .line{
 
 .about-container > .skills > .the-skills > .php > .progress::before{
     content: "";
-    height: 10px;
-    
-    width: 0;
-
+    height: 20px;
+    width: 0%;
+    top: 0;
+    left: 0;
+    background-color: var(--background-color);
+    transition: width 2500ms ease;
+    position: absolute;
 }
 
-/* the landing ends here */
+.the-skills > .php > .progress:nth-of-type(1).progress:nth-of-type(1).active::before
+{
+    width: 90%;
+}
+.the-skills > .php > .progress:nth-of-type(1).progress:nth-of-type(1).active::before{
+    width: 90%;
+}
+.the-skills > .php > .progress:nth-of-type(1).progress:nth-of-type(1).active::before{
+    width: 90%;
+}
+.the-skills > .php > .progress:nth-of-type(1).progress:nth-of-type(1).active::before{
+    width: 90%;
+}
+.the-skills > .php > .progress:nth-of-type(1).progress:nth-of-type(1).active::before{
+    width: 90%;
+} 
+
+/* the landing ends here
