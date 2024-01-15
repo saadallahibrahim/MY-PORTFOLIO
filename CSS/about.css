@@ -104,6 +104,7 @@ html{
     font-family: var(--fontfamily);
     font-size: var(--fontsize);
     text-transform: var(--text-transform);
+    letter-spacing: var(--letter-spacing);
     margin-bottom: 1%;
 } 
 
@@ -127,6 +128,7 @@ h3 > .line{
     width: 95%;
     height: 80%;
     background: transparent;
+    margin-bottom: 3%;
     
 }
 
@@ -140,7 +142,7 @@ h3 > .line{
     width: 33%;
     height: 50%;
     background-color: transparent;
-    margin-right: 2%;
+    margin-right: 4%;
 }
 .landing > .about-container > .content > .content2 > .content3 > .image > img{
     width: 300px;
@@ -172,7 +174,7 @@ h3 > .line{
 
 .about-container > .content > .content2 > .content3 > .content4 > .contact{
     width: 60%;
-    background: red;
+    background: transparent;
     margin-top: 3%;
 }
 .contact > ul{
@@ -187,7 +189,83 @@ h3 > .line{
 }
 .contact > ul > li>.fa{
     color: var(--background-color);
-    margin-right: 1%;
+    margin-right: 2%;
+}
+
+
+.about-container > .skills > .headings > h3{
+    width: 20%;
+    color: var(--color);
+    font-family: var(--fontfamily);
+    font-size: var(--fontsize);
+    text-transform: var(--text-transform);
+    letter-spacing: var(--letter-spacing);
+    margin-bottom: 1%;
+} 
+
+h3 > .line{
+    display: inline-block;
+    margin-left: 2%;
+    width: 30%;
+    height: 3px;
+    background: var(--background-color);
+}
+
+
+.about-container > .skills > .headings > h1{
+    font-family: var(--fontfamily);
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    color: var(--color);
+}
+
+
+.about-container > .skills > .the-skills{
+    width: 100%;
+    background-color: red;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+
+.about-container > .skills > .the-skills > .progress{
+    width: 30rem;
+    height: 10px;
+    border: 1px solid var(--background-color);
+    border-radius: 0 7px 7px 0;
+    background-color: transparent;
+    margin: 20px auto;
+    position: relative;
+    
+}
+
+.about-container > .skills > .the-skills > .progress::before{
+    content: "";
+    height: 90%;
+    top: 0;
+    left: 0;
+    width: 0%;
+    background-color: var(--background-color);
+    transition: width 2500ms ease;
+    border-radius: 0 7px 7px 0;
+    position: absolute;
+
+}
+
+.the-skills > .progress:nth-of-type(1).active::before{
+    width: 90%;
+}
+
+.the-skills > .progress:nth-of-type(2).active::before{
+    width: 20%;
+}
+.the-skills > .progress:nth-of-type(3).active::before{
+    width: 50%;
+}
+.the-skills > .progress:nth-of-type(3).active::before{
+    width: 10%;
 }
 
 
