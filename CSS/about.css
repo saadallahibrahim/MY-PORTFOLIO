@@ -28,7 +28,7 @@ html{
     justify-content: space-between;
     align-items: center;
     background-color: black;
-    box-shadow: 4px 4px 4px purple;
+    box-shadow: 1px 1px 1px var(--background-color);
     position: fixed;
     z-index: 100;
 }
@@ -244,52 +244,52 @@ h3 > .line{
     margin-bottom: 5px;
     display: flex;
 }
-.about-container > .skills > .the-skills > .php > h5 > .per{
-    margin-left: 100%;
-}
-.about-container > .skills > .the-skills > .php > h5 > .perc{
-    margin-left: 84%;
-}
-.about-container > .skills > .the-skills > .php > h5 > .percen{
-    margin-left: 100%;
-}
-.about-container > .skills > .the-skills > .php > h5 > .percentage{
-    margin-left: 98%;
-}
-.about-container > .skills > .the-skills > .php > .progress{
-    width: 30rem;
-    height: 10px;
-    border: 2px solid var(--background-color);
-    border-radius: 5px;
-    position: relative;
+
+.about-container > .skills > .the-skills{
+    display: block;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
 }
 
-.about-container > .skills > .the-skills > .php > .progress::before{
+.about-container > .skills > .the-skills > .progress{
+    width: 30rem;
+    height: 15px;
+    border: 1px solid var(--background-color);
+    border-radius: 5px;
+    position: relative;
+    margin: 20px auto;
+}
+
+.about-container > .skills > .the-skills > .progress::before{
     content: "";
-    height: 20px;
     width: 0%;
     top: 0;
     left: 0;
     background-color: var(--background-color);
-    transition: width 2500ms ease;
     position: absolute;
+    border: 5px;
+    transition: width 2500ms ease;
+    height: 100%;
 }
-
-.the-skills > .php > .progress:nth-of-type(1).progress:nth-of-type(1).active::before
-{
-    width: 90%;
+.the-skills > .progress:nth-of-type(1).active::before{
+    width: 70%;
 }
-.the-skills > .php > .progress:nth-of-type(1).progress:nth-of-type(1).active::before{
-    width: 90%;
+.progress:nth-of-type(2).active::before{
+    width: 10%;
 }
-.the-skills > .php > .progress:nth-of-type(1).progress:nth-of-type(1).active::before{
-    width: 90%;
+.progress:nth-of-type(3).active::before{
+    width: 50%;
 }
-.the-skills > .php > .progress:nth-of-type(1).progress:nth-of-type(1).active::before{
-    width: 90%;
+.progress:nth-of-type(4).active::before{
+    width: 100%;
 }
-.the-skills > .php > .progress:nth-of-type(1).progress:nth-of-type(1).active::before{
-    width: 90%;
-} 
+.progress:nth-of-type(5).active::before{
+    width: 60%;
+}
+.progress:nth-of-type(6).active::before{
+    width: 80%;
+}
 
 /* the landing ends here

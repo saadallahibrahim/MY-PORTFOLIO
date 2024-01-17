@@ -1,10 +1,10 @@
 // const navLinks = document.querySelectorAll('.navbar');
 // const windowPathname = window.location.pathname;
 
-const progrossBars = document.querySelectorAll('.progress'); //create the intersection observer
-const observer = new IntersectionObserver((enteries) => {
+const progressBars = document.querySelectorAll('.progress'); //create the intersection observer
+const observer = new IntersectionObserver((entries) => {
     // loop through the entries
-    enteries.forEach((entry) => {
+    entries.forEach((entry) => {
         // check if the entry is intersecting
         if(entry.isIntersecting){
             // add the active class to the progress bars 
@@ -14,7 +14,7 @@ const observer = new IntersectionObserver((enteries) => {
         }
         else{
             // remove the active class from the progess bars
-            progrossBars.forEach((progress) => {
+            progressBars.forEach((progress) => {
                 progress.classList.remove("active");
             });
         }
