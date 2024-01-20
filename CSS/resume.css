@@ -179,12 +179,11 @@ h3 > .line{
 }
 
 
-.content-container > .content1 > .sum > .details > h3 > .dot, 
-.content-container > .content2 > .sum > .details > h3 > .dot
+.content-container > .content1 > .sum > .details > ul, 
+.content-container > .content2 > .sum > .details > ul
 {
-    padding: 4px;
-    border-radius: 2000%;
-    background-color: var(--background-color);
+    color: var(--background-color);
+    list-style: 
 }
 
 /* the landing ends here */
