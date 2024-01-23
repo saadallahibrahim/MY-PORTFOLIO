@@ -132,7 +132,8 @@ h3 > .line{
     height: 100vh;
     background-color: transparent;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 }
 
@@ -158,7 +159,7 @@ h3 > .line{
     font-size: 1.5rem;
     color: var(--color);
     text-transform: var(--text-transform);
-    margin-bottom: 1%;
+    margin-bottom: 2%;
 }
 
 .content-container > .content1 > .sum > .details,
@@ -180,7 +181,7 @@ h3 > .line{
     font-size: 1.2rem;
     color: var(--background-color);
     text-transform: var(--text-transform);
-
+    margin-bottom: 2%;
 }
 
 .content-container > .content1 > .sum > .details::before,
@@ -204,14 +205,35 @@ h3 > .line{
     font-size: 1.2rem;
     color: var(--background-color);
     text-transform: var(--text-transform);
+    margin-bottom: 2%;
 }
 
-.content-container > .content2 > .sum > .details > p{
+.content-container > .content1 > .sum > .details > p,
+.content-container > .content2 > .sum > .details > p
+{
     color: var(--color);
     font-family: var(--fontsize2);
     font-size: var(--fontsize);
     font-style: italic;
 
+}
+
+.content-container > .content1 > .sum > .details > ul{
+    display: block;
+    color: var(--color);
+    margin-top: 4%;
+    margin-left: 3%;
+    font-size: 1.2rem;
+}
+
+.content-container > .content1 > .sum > .details > ul li{
+    font-family: sans-serif;
+    text-transform: var(--text-transform);
+    line-height: 2rem;
+}
+
+.content-container > .content1 > .sum > .details > ul > li > span{
+    color: var(--background-color);
 }
 
 /* the landing ends here */
