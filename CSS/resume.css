@@ -6,6 +6,7 @@
 
 :root{
     --fontfamily: 'Poppins', sans;
+    --fontfamily2: sans-serif;
     --fontsize: 1rem;
     --fontsize2: 2rem;
     --color: #fff;
@@ -129,12 +130,9 @@ h3 > .line{
 
 .content-container{
     width: 100%;
-    height: 100vh;
+    height: 250vh;
     background-color: transparent;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
 
 .content-container > .content1,
@@ -230,6 +228,7 @@ h3 > .line{
     font-family: sans-serif;
     text-transform: var(--text-transform);
     line-height: 2rem;
+    font-size: 15px;
 }
 
 .content-container > .content1 > .sum > .details > ul > li > span{
