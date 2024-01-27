@@ -70,6 +70,10 @@ html{
     transition:transform .5s linear;
 }
 
+.header > .navbar > ul > li > a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
 
 /* the header ends here */
 

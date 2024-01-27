@@ -170,16 +170,20 @@ html{
 
 /* footer start here */
 .landing > .footer{
+    color: var(--color);
     width: 100%;
     background-color: transparent;
-    padding: 10px 3px;
-    text-align: right;
     text-transform: var(--text-transform);
-    color: white;
     font-family: var(--fontfamily);
-    font-size: 15px;
     letter-spacing: var(--letter-spacing);
     position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 15px;
+    text-align: right;
+    font-size: 13px;
+    z-index: 999999;
 
 }
 .landing > .footer > span{
