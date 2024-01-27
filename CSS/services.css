@@ -136,15 +136,49 @@ h3 > .line{
   justify-content: center;
   gap: 0.6rem;
   align-items: center;
-  background: rebeccapurple;
+  background: transparent;
 }
 
-.landing > .container > .container2 > .row{
+.landing > .container > .container2 > .row
+{
   width: 100%;
   padding: 2% 3%;
   height: 100%;
-  background-color: red;
-  flex-basis: 1rem;
+  background-color:  rgba(204, 204, 204, 0.1);
+  flex: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.landing > .container > .container2 > .content{
+  position: relative;
+}
+.landing > .container > .container2 > .content > .row > .icon{
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  background: #5dabf4;
+  border-radius: 5px;
+  transition: all 0.3s ease-out 0s;
+  display: flex;
+  transform-style: preserve-3d;
 }
 
-/* the header ends here */
+.landing > .container > .container2 > .row > .content > .icon > .fa{
+  font-size: 3rem;
+  color: var(--background-color);
+
+}
+.landing > .container > .container2 > .row > .content::before::before{
+  position: absolute;
+  content: "";
+  left: -8px;
+  top: -8px;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  transition: all 0.3s ease-out 0s;
+  transform: translateZ(-1px);
+}
