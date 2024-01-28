@@ -197,3 +197,45 @@ h3 > .line{
   background-color: var(--background-color);
   transition: 0.5s;
 }
+
+.landing > .container > .container2 > .row:hover .icon::before{
+  background: var(--background-color);
+}
+.landing > .container > .container2 > .row:hover .icon{
+  background-color: white;
+}
+.landing > .container > .container2 > .row:hover .icon > .fa{
+  color: var(--background-color);
+}
+
+
+.footer{
+  /* width: 100%;
+  background-color: black;
+  padding: 10px; */
+
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 15px;
+  text-align: right;
+  font-size: 13px;
+  color: #fff;
+  z-index: 999999;
+}
+
+.footer > p{
+  font-family: var(--fontfamily);
+  font-size: var(--fontsize);
+  color: var(--color);
+  text-transform: var(--text-transform);
+  text-align: right;
+}
+
+.footer > p > span{
+  color: var(--background-color);
+  font-weight: var(--font-weight);
+  margin-right: 5px;
+}
+
