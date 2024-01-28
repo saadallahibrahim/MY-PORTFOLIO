@@ -78,6 +78,7 @@ html{
 }
 
 /* the landing start here */
+
 .landing{
     width: 100%;
     min-height: 120vh;
@@ -108,6 +109,10 @@ html{
   margin-bottom: 1%;
 } 
 
+.landing > .container > .headings{
+    margin-bottom: 5%;
+}
+
 h3 > .line{
   display: inline-block;
   margin-left: 2%;
@@ -119,124 +124,32 @@ h3 > .line{
 
 .landing > .container > .headings > h1{
   font-family: var(--fontfamily);
-  font-size: 2.3rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   color: var(--color);
 }
 
-.landing > .container > .container2{
-  width: 100%;
-  padding: 3%;
-  height: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.6rem;
-  align-items: center;
-  background: transparent;
+.landing > .container > .content{
+    width: 100%;
+    text-align: left;
 }
 
-.landing > .container > .container2 > .row
-{
-  width: 100%;
-  padding: 2% 3%;
-  height: 100%;
-  background-color:  rgba(204, 204, 204, 0.1);
-  flex: 1rem;
-  border-radius: 10px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-}
-.landing > .container > .container2 > .content{
-  position: relative;
-}
-.landing > .container > .container2 > .row > .content > .icon{
-  margin: 0 auto;
-  margin-bottom: 3%;
-  width: 64px;
-  height: 64px;
-  background: var(--background-color);
-  border-radius: 5px;
-  transition: all 0.3s ease-out 0s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform-style: preserve-3d;
-}
-.landing > .container > .container2 > .row > .content > .icon::before{
-  position: absolute;
-  content: "";
-  left: -8px;
-  top: -8px;
-  height: 100%;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 5px;
-  transition: all 0.3s ease-out 0s;
-  transform: translateZ(-1px);
-}
-.landing > .container > .container2 > .row > .content > .icon > .fa{
-  color: var(--color);
-  font-size: 1.5rem;
+.landing > .container > .content h3{
+    font-family: var(--fontfamily);
+    font-size: 2rem;
+    color: var(--color);
+    font-weight: var(--font-weight);
+    text-transform: var(--text-transform);
+    margin-bottom: 1%;
 }
 
-.landing > .container > .container2 > .row > .content > h4{
-  font-family: sans-serif;
-  color: var(--color);
-  font-weight: var(--font-weight);
-  font-size: 1.5rem;
-  margin-bottom: 4%;
+.landing > .container > .content a{
+    color: var(--background-color);
+    font-family: var(--fontfamily);
+    text-transform: var(--text-transform);
+    font-size: 1.2rem;
+    text-decoration: none;
+    
 }
 
-.landing > .container > .container2 > .row > .content > p{
-  color: rgba(355, 355, 355, 0.60);
-  font-family: sans-serif;
-
-}
-.landing > .container > .container2 > .row:hover{
-  background-color: var(--background-color);
-  transition: 0.5s;
-}
-
-.landing > .container > .container2 > .row:hover .icon::before{
-  background: var(--background-color);
-}
-.landing > .container > .container2 > .row:hover .icon{
-  background-color: white;
-}
-.landing > .container > .container2 > .row:hover .icon > .fa{
-  color: var(--background-color);
-}
-
-
-.footer{
-  /* width: 100%;
-  background-color: black;
-  padding: 10px; */
-
-  position: fixed;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  padding: 15px;
-  text-align: right;
-  font-size: 13px;
-  color: #fff;
-  z-index: 999999;
-}
-
-.footer > p{
-  font-family: var(--fontfamily);
-  font-size: var(--fontsize);
-  color: var(--color);
-  text-transform: var(--text-transform);
-  text-align: right;
-}
-
-.footer > p > span{
-  color: var(--background-color);
-  font-weight: var(--font-weight);
-  margin-right: 5px;
-}
 
