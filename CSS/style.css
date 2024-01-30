@@ -99,10 +99,6 @@ html{
     text-align: left;
 }
 
-.active{
-    color: var(--background-color);
-}
-
 .landing > .container > .navbars >  .navbar > ul > li > a{
     padding: 5px;
     text-align: center;
@@ -135,8 +131,16 @@ html{
     transform-origin: left;
 }
 
-.landing > .container > .navbars > .navbar > ul > li > a:hover::before:active{
-    background-color: var(--background-color);
+/* .landing > .container > .navbars > .navbar > ul > li > a:active::before,
+.landing > .container > .navbars > .navbar > ul > li > a:active::before
+{
+    color: var(--background-color);
+} */
+
+.landing > .container > .navbars .navbar ul li a.active{
+    color: var(--background-color);
+    font-family: sans-serif;
+    font-weight: var(--font-weight);
 }
 
 .landing > .container > .icons{
