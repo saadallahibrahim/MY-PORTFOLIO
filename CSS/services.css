@@ -77,6 +77,21 @@ html{
     transform-origin: left;
 }
 
+    
+.header > .navbar > ul li a.active:before{
+  content: '';
+  width: 50%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--background-color);
+  position: absolute;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition:transform .5s linear;
+  color: var(--background-color);
+  font-family: sans-serif;
+}
 
 /* the landing start here */
 .landing{
