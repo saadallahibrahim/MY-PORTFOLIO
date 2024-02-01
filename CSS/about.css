@@ -210,7 +210,11 @@ h3 > .line{
     color: var(--background-color);
     margin-right: 2%;
 }
-
+.about-container > .skills{
+    width: 100%;
+    display: block;
+    background: red;
+}
 
 .about-container > .skills > .headings > h3{
     width: 20%;
@@ -274,41 +278,11 @@ h3 > .line{
 
 .about-container > .skills > .the-skills > .progress{
     width: 30rem;
-    height: 15px;
+    height: 10px;
     border: 1px solid var(--background-color);
     border-radius: 5px;
     position: relative;
     margin: 20px auto;
-}
-
-.about-container > .skills > .the-skills > .progress::before{
-    content: "";
-    width: 0%;
-    top: 0;
-    left: 0;
-    background-color: var(--background-color);
-    position: absolute;
-    border: 5px;
-    transition: width 2500ms ease;
-    height: 100%;
-}
-.the-skills > .progress:nth-of-type(1).active::before{
-    width: 70%;
-}
-.progress:nth-of-type(2).active::before{
-    width: 10%;
-}
-.progress:nth-of-type(3).active::before{
-    width: 50%;
-}
-.progress:nth-of-type(4).active::before{
-    width: 100%;
-}
-.progress:nth-of-type(5).active::before{
-    width: 60%;
-}
-.progress:nth-of-type(6).active::before{
-    width: 80%;
 }
 
 /* the landing ends here
