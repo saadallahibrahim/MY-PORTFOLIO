@@ -6,7 +6,7 @@
     <title>Document</title>
 
     <style>
-
+/* 
         *{
             margin: 0;
             padding: 0;
@@ -123,14 +123,59 @@
                 width: 50%;
             }
             
-        }
+        } */
+        .the-skills {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill {
+    margin-bottom: 10px;
+}
+
+.skill-name {
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 20px;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    transition: width 0.5s ease;
+}
 
     </style>
 </head>
 <body>
 
+    <div class="the-skills">
+        <div class="skill">
+            <div class="skill-name">HTML</div>
+            <div class="progress-bar" id="htmlBar"></div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">CSS</div>
+            <div class="progress-bar" id="cssBar"></div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">JavaScript</div>
+            <div class="progress-bar" id="jsBar"></div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">PHP</div>
+            <div class="progress-bar" id="phpBar"></div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">MySQL</div>
+            <div class="progress-bar" id="mysqlBar"></div>
+        </div>
+    </div>
     
-    <div class="skill">
+    
+    <!-- <div class="skill">
         <li><h3>html</h3>
             <span class="bar"> <span class="html"></span></span>
         </li>
@@ -151,6 +196,31 @@
             <span class="bar"> <span class="MysQL"></span></span>
         </li>
     </div>
-    
+     -->
+
+     <script>
+      function animateProgressBar(barId, percentage) {
+    var bar = document.getElementById(barId);
+    var width = 0;
+    var id = setInterval(frame, 10);
+    function frame() {
+        if (width >= percentage) {
+            clearInterval(id);
+        } else {
+            width++;
+            bar.style.width = width + "%";
+            bar.innerHTML = width + "%";
+        }
+    }
+}
+
+animateProgressBar("htmlBar", 90);
+animateProgressBar("cssBar", 85);
+animateProgressBar("jsBar", 80);
+animateProgressBar("phpBar", 75);
+animateProgressBar("mysqlBar", 70);
+
+
+     </script>
 </body>
 </html>

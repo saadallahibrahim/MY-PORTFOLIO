@@ -253,135 +253,42 @@ h3 > .line{
 
 .about-container > .skills > .the-skills{
     display: flex;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
-    background-color:  transparent;
+    background-color:  red;
 }
 
-.the-skills > .progress{
-    width: 60%;
-    display: block;
-    background-color: transparent;
-    box-shadow:  0 14px 28px rgb(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+.about-container > .skills > .the-skills {
+    display: flex;
+    flex-direction: column;
 }
 
-.the-skills > .progress > li{
-    list-style: none;
-    margin: 20px 0;
-    padding: 5px;
+.about-container > .skills > .the-skills > .skill {
+    margin-bottom: 10px;
+    width: 100%;
 }
 
-.the-skills > .progress > li > h3{
-    font-family: sans-serif;
-    font-size: 15px;
-    text-transform: uppercase;
+.about-container > .skills > .the-skills > .skill > .skill-name {
+    margin-bottom: 5px;
     color: var(--color);
-    margin-bottom: 1%;
+    text-align: left;
 }
 
-.the-skills > .progress > li > .bar{
-    background-color: #353b48;
-    display: block;
-    height: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.the-skills > .progress > li > .bar > .html{
-    width: 90%;
-    height: 10px;
-    background-color: var(--background-color);
-    border-radius: 10px;
+.about-container > .skills > .the-skills > .skill > .progress-bar {
+    width: 0%;
+    height: 20px;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    transition: width 0.5s ease;
 }
 
 
-/* 
-.the-skills > .progress > li > .bar > span{
-    height: 10px;
-    float: left;
-    background-color: linear-gradient(135deg, rgba(236, 0, 140, 1)0%, rgba(252, 103, 103, 1)100%);
-} */
 
-
-/* .the-skills > .progress > li > .bar > .html{
-    width: 90%;
-    animation: html 3s;
-}
-
-
-.the-skills > .progress > li >  .bar > .css{
-    width: 80%;
-    animation: css 3s;
-}
-
-.the-skills > .progress > li > .bar > .javascript{
-    width: 45%;
-    animation: javascript 3s;
-}
-
-.the-skills > .progress > li >  .bar > .php{
-    width: 65%;
-    animation: php 3s;
-}
-
-.the-skills > .progress > li >  .bar > .MysQL{
-    width: 50%;
-    animation: MysQL 3s;
-} */
-
-/* @keyframes html {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 90%;
-    }
-    
-}
-
-@keyframes css {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 80%;
-    }
-    
-}
-
-@keyframes javascript {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 45%;
-    }
-    
-}
-
-@keyframes php {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 65%;
-    }
-    
-}
-
-@keyframes MysQL {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 50%;
-    }
-    
-} */
 
 
 /* the landing ends here
