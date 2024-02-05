@@ -3,224 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Scroll Reveal Example</title>
+    <!-- Include ScrollReveal.js -->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <style>
-/* 
+        /* Add your CSS styles here */
+
         *{
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            box-sizing: border-box;
-        }
-        h3{
-            margin: 5px;
-        }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .skill{
-            width: 500px;
-            margin: 60px auto;
-            padding: 20px;
-            box-shadow: 0 14px 28px rgb(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-        }
+:root{
+    --fontfamily: 'Poppins', sans;
+    --fontsize: 1rem;
+    --fontsize2: 2rem;
+    --color: #fff;
+    --text-transform: capitalize;
+    --letter-spacing: 2px;
+    --font-weight: bolder;
+    --background-color: purple;
+    --transition: 0.5s;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
 
-        .skill li{
-            margin: 20px 0;
-            padding: 10px;
-        }
+/* the style for landing start here*/
 
-        .bar{
-            background-color: #353b48;
-            display: block;
-            height: 20px;
-            border: 1px solid rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-        }
+.landing{
+    width: 100%;
+    min-height: 100vh;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(19, 18, 18, 0.712), rgba(14, 13, 13, 0.614)), url(../IMAGES/background.jpg);
+    background-position: center;
+    background-size: contain;
+}
+.landing > .container{
+    width: 100%;
+    padding: 3% 2%;
+    min-height: 90vh;
+    padding: 9% 10%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color:  transparent;
+}
 
-        .bar:hover{
-            box-shadow: 0 14px 28px rgb(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-        }
-        .skill > li > .bar > span{
-            height: 20px;
-            float: left;
-            background: linear-gradient(135deg, rgba(236, 0, 140, 1)0%, rgba(252, 103, 103, 1)100%);
-        }
+.landing > .container > .headings{
+    width: 70%;
+    /* padding: 1% 2%; */
+    background: transparent;
+}
 
-        .html{
-            width: 90%;
-            animation: html 3s;
-        }
+.landing > .container > .headings > h1{
+    font-family: var(--fontfamily);
+    font-size: 3.2rem;
+    font-weight: var(--font-weight);
+    letter-spacing: 1px;
+    text-transform: var(--text-transform);
+    color: var(--color);
+    margin-bottom: 2%;
+}
 
-        
-        .css{
-            width: 80%;
-            animation: css 3s;
-        }
-        
-        .javascript{
-            width: 45%;
-            animation: javascript 3s;
-        }
-        
-        .php{
-            width: 65%;
-            animation: php 3s;
-        }
-        
-        .MysQL{
-            width: 50%;
-            animation: MysQL 3s;
-        }
+.landing > .container > .headings > h2{
+    font-family: var(--fontfamily);
+    font-size: 1.3rem;
+    color: rgb(160, 153, 153);
+    letter-spacing: var(--letter-spacing);
+    text-transform: var(--text-transform);
+}
+.landing > .container > .headings > h2 > span{
+    color: var(--color);
+    letter-spacing: var(--letter-spacing);
+    padding: 5px 1%;
+    border-bottom: 2px solid purple;
+}
 
-        @keyframes html {
-            0%{
-                width: 0%;
-            }
-            100%{
-                width: 90%;
-            }
-            
-        }
-
-        @keyframes css {
-            0%{
-                width: 0%;
-            }
-            100%{
-                width: 80%;
-            }
-            
-        }
-
-        @keyframes javascript {
-            0%{
-                width: 0%;
-            }
-            100%{
-                width: 45%;
-            }
-            
-        }
-
-        @keyframes php {
-            0%{
-                width: 0%;
-            }
-            100%{
-                width: 65%;
-            }
-            
-        }
-
-        @keyframes MysQL {
-            0%{
-                width: 0%;
-            }
-            100%{
-                width: 50%;
-            }
-            
-        } */
-        .the-skills {
+.landing > .container > .navbars{
+    width: 50%;
+    /* padding: 1% 1%; */
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
-.skill {
-    margin-bottom: 10px;
+.landing > .container > .navbars >  .navbar > ul{
+    list-style: none;
+    display: flex;
 }
 
-.skill-name {
-    margin-bottom: 5px;
+.landing > .container > .navbars > .navbar{
+    width: 100%;
+    display: block;
+    background: transparent;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
 }
 
-.progress-bar {
-    width: 0%;
-    height: 20px;
-    background-color: #4caf50;
-    color: white;
+.landing > .container > .navbars >  .navbar > ul > li > a{
+    padding: 5px;
     text-align: center;
-    line-height: 20px;
-    transition: width 0.5s ease;
+    font-family: var(--fontfamily);
+    font-size: var(--fontsize);
+    letter-spacing: var(--letter-spacing);
+    color: rgb(160, 153, 153);
+    text-decoration: none;
+    text-transform: var(--text-transform);
+    font-weight: var(--font-weight);
+    position: relative;
 }
 
+
+.landing > .container > .navbars > .navbar > ul > li > a::before{
+    content: '';
+    width: 50%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--background-color);
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition:transform .5s linear;
+}
+
+.landing > .container > .navbars > .navbar > ul > li > a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.landing > .container > .navbars > .navbar > ul li a.active:before{
+    content: '';
+    width: 50%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--background-color);
+    position: absolute;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition:transform .5s linear;
+    color: var(--background-color);
+    font-family: sans-serif;
+}
+
+.landing > .container > .icons{
+    display: flex;
+    width: 50%;
+    background-color: transparent;
+    padding: 10px;
+}
+
+.landing > .container > .icons > a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        line-height: 1;
+        margin-right: 8px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        text-decoration: none;
+}
+
+.landing > .container > .icons > a:hover{
+    background: var(--background-color);
+    transition: var(--transition);
+}
+
+
+/* the style for landing end here*/
+
+/* footer start here */
+.landing > .footer{
+    color: var(--color);
+    width: 100%;
+    background-color: transparent;
+    text-transform: var(--text-transform);
+    font-family: var(--fontfamily);
+    letter-spacing: var(--letter-spacing);
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 15px;
+    text-align: right;
+    font-size: 13px;
+    z-index: 999999;
+
+}
+.landing > .footer > span{
+    color: var(--background-color);
+    font-weight: var(--font-weight);
+    margin-right: 5px;
+}
+/* footer ends here */
     </style>
 </head>
 <body>
-
-    <div class="the-skills">
-        <div class="skill">
-            <div class="skill-name">HTML</div>
-            <div class="progress-bar" id="htmlBar"></div>
+    <section class="landing">
+        <div class="container">
+            <div class="headings">
+                <h1>ibrahim-Saad</h1>
+                <h2>the untypical <span>developer.</span></h2>
+            </div>
+            <div class="navbars">
+                <div class="navbar">
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="resume.html">resume</a></li>
+                        <li><a href="Services.html">service</a></li>
+                        <li><a href="portfolio.html">portfolio</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="icons">
+                <a href=""><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </div>
         </div>
-        <div class="skill">
-            <div class="skill-name">CSS</div>
-            <div class="progress-bar" id="cssBar"></div>
+        <div class="footer">
+            designed by <span>ibrahim-Saad</span>
         </div>
-        <div class="skill">
-            <div class="skill-name">JavaScript</div>
-            <div class="progress-bar" id="jsBar"></div>
-        </div>
-        <div class="skill">
-            <div class="skill-name">PHP</div>
-            <div class="progress-bar" id="phpBar"></div>
-        </div>
-        <div class="skill">
-            <div class="skill-name">MySQL</div>
-            <div class="progress-bar" id="mysqlBar"></div>
-        </div>
-    </div>
-    
-    
-    <!-- <div class="skill">
-        <li><h3>html</h3>
-            <span class="bar"> <span class="html"></span></span>
-        </li>
-
-        <li><h3>css</h3>
-            <span class="bar"> <span class="css"></span></span>
-        </li>
-
-        <li><h3>javascript</h3>
-            <span class="bar"> <span class="javascript"></span></span>
-        </li>
-
-        <li><h3>php</h3>
-            <span class="bar"> <span class="php"></span></span>
-        </li>
-
-        <li><h3>MysQL</h3>
-            <span class="bar"> <span class="MysQL"></span></span>
-        </li>
-    </div>
-     -->
-
-     <script>
-      function animateProgressBar(barId, percentage) {
-    var bar = document.getElementById(barId);
-    var width = 0;
-    var id = setInterval(frame, 10);
-    function frame() {
-        if (width >= percentage) {
-            clearInterval(id);
-        } else {
-            width++;
-            bar.style.width = width + "%";
-            bar.innerHTML = width + "%";
-        }
-    }
-}
-
-animateProgressBar("htmlBar", 90);
-animateProgressBar("cssBar", 85);
-animateProgressBar("jsBar", 80);
-animateProgressBar("phpBar", 75);
-animateProgressBar("mysqlBar", 70);
+    </section>
+    <!-- Add your custom JavaScript -->
+    <script>
+        // Initialize ScrollReveal
+        ScrollReveal().reveal('.headings', {
+            duration: 500,
+            delay: 200,
+            easing: 'ease-in-out',
+            origin: 'top',
+            distance: '50px',
+            opacity: 0,
+            scale: 0.8
+        });
 
 
-     </script>
+        ScrollReveal().reveal('.navbars', {
+            duration: 500,
+            delay: 200,
+            easing: 'ease-in-out',
+            origin: 'right',
+            distance: '50px',
+            opacity: 0,
+            scale: 0.8
+        });
+
+        ScrollReveal().reveal('.icons', {
+            duration: 500,
+            delay: 200,
+            easing: 'ease-in-out',
+            origin: 'left',
+            distance: '50px',
+            opacity: 0,
+            scale: 0.8
+        });
+    </script>
 </body>
 </html>

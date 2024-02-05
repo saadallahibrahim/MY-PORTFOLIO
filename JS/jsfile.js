@@ -32,3 +32,69 @@ animateProgressBar("cssBar", 85);
 animateProgressBar("jsBar", 80);
 animateProgressBar("phpBar", 75);
 animateProgressBar("mysqlBar", 70);
+
+
+
+// scrollReveal start here for index
+
+ // Initialize ScrollReveal
+ ScrollReveal().reveal('.headings', {
+    duration: 700,
+    delay: 200,
+    easing: 'ease-in-out',
+    origin: 'top',
+    distance: '50px',
+    opacity: 0,
+    scale: 0.8
+});
+
+
+ScrollReveal().reveal('.icons', {
+    duration: 1000,
+    delay: 300,
+    easing: 'ease-in-out',
+    origin: 'left',
+    distance: '600px',
+    opacity: 0,
+    scale: 0.8
+});
+
+
+
+
+// // scrollReveal start here for about
+
+
+ScrollReveal().reveal('.navbar', {
+    duration: 800,
+    delay: 250,
+    easing: 'ease-in-out',
+    origin: 'left',
+    distance: '50px',
+    opacity: 0,
+    scale: 0.8
+});
+
+ScrollReveal().reveal('.skill', {
+    duration: 800,
+    delay: 300,
+    easing: 'ease-in-out',
+    origin: 'top',
+    distance: '40px',
+    opacity: 0,
+    scale: 0.8
+});
+
+
+// // scrollReveal start here for resume
+
+ScrollReveal().reveal('.details', {
+    duration: 800,
+    delay: 200,
+    easing: 'ease-in-out',
+    origin: 'buttom',
+    distance: '30px',
+    opacity: 0,
+    scale: 0.8
+});
+
