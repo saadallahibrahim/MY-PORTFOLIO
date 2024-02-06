@@ -1,0 +1,125 @@
+
+
+/* the responsiveness for index start here */
+
+@media only screen and (max-width: 1023px){
+
+}
+
+
+@media only screen and (max-width: 768px){
+
+
+
+}
+
+
+/* the responsiveness for index  ends here */
+
+
+
+
+/* the responsiveness for about start here */
+
+@media only screen and (max-width: 1023px){
+
+}
+
+
+@media only screen and (max-width: 768px){
+
+}
+
+
+/* the responsiveness for about ends here */
+
+
+
+
+/* the responsiveness for resume start here */
+
+@media only screen and (max-width: 1023px){
+
+}
+
+
+@media only screen and (max-width: 768px){
+
+}
+
+
+/* the responsiveness for resume ends here */
+
+
+
+
+/* the responsiveness for services start here */
+
+@media only screen and (max-width: 1023px){
+
+}
+
+
+@media only screen and (max-width: 768px){
+
+}
+
+
+/* the responsiveness for services ends here */
+
+
+
+
+/* the responsiveness for portfolio start here */
+
+@media only screen and (max-width: 1023px){
+
+}
+
+
+@media only screen and (max-width: 768px){
+
+    .landing{
+        width: 100%;
+        display: flex;
+    }
+
+
+    .landing > .contaner{
+        width: 100%;
+    }
+
+    .landing > .contaner > .headings{
+        width: 100%;
+    }
+
+    .landing > .contaner > .headings > h1{
+        font-size: 10px;
+    }
+
+
+    
+
+
+
+}
+
+
+/* the responsiveness for portfolio ends here */
+
+
+
+
+/* the responsiveness for contact start here */
+
+@media only screen and (max-width: 1023px){
+
+}
+
+
+@media only screen and (max-width: 768px){
+
+}
+
+
+/* the responsiveness for contact ends here */

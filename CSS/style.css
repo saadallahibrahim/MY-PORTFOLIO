@@ -26,7 +26,7 @@ html{
 .landing{
     width: 100%;
     min-height: 100vh;
-    display: inline-block;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(rgba(19, 18, 18, 0.712), rgba(14, 13, 13, 0.614)), url(../IMAGES/background.jpg);
@@ -112,6 +112,13 @@ html{
     position: relative;
 }
 
+.landing > .container > .navbars > .navbar > .fa{
+    display: none;
+}
+
+.landing > .fa{
+    display: none;
+}
 
 .landing > .container > .navbars > .navbar > ul > li > a::before{
     content: '';
@@ -199,3 +206,77 @@ html{
     margin-right: 5px;
 }
 /* footer ends here */
+
+
+
+
+
+/* media query start here */
+
+
+@media only screen and (max-width: 1023px){
+
+}
+
+
+@media only screen and (max-width: 768px){
+    
+
+    .landing{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .landing > .container{
+        width: 60%;
+        height: 20vh;
+    }
+
+
+    .landing > .container > .headings h1 {
+        font-size: 15px;
+    }
+
+    .landing > .container > .headings > .headings h2 {
+        font-size: 15px;
+    }
+
+    .landing > i.fa-bars {
+        display: block;
+        font-size: 1.2rem;
+        color: white;
+        text-align: right;
+        margin: 10px 20px;
+
+    }
+
+    .landing > .container > .navbars > .navbar{
+        display: none; /* Hide the navigation links */
+    }
+
+    .landing > .container > .navabars > .navbar{
+        position: absolute;
+        left: -300px;
+        top: 0;
+        width: 250px;
+        height: 100vh;
+        z-index: 999;
+        background: rgb(21, 19, 19);    
+        box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+        display: inline-block;
+    }
+    .navbar ul.active {
+        display: block; /* Show the navigation links when active */
+    }
+
+    .navbar li {
+        float: none;
+    }
+
+    .navbar li a {
+        display: block;
+        text-align: left;
+    }
+}
