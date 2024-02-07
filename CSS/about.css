@@ -305,4 +305,36 @@ h3 > .line{
 
 
 
-/* the landing ends here
+/* the landing ends here */
+
+@media only screen and (max-width: 768px){
+    
+
+    .header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 1% 1%;
+        position: fixed;
+        background: var(--background-color);
+    }
+
+    .header > .navbar{
+        position: absolute;
+        left: -300px;
+        top: 0;
+        width: 250px;
+        height: 100vh;
+        z-index: 999;
+        background: rgb(21, 19, 19);    
+        box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+        display: inline-block;
+    }
+
+    .header > .navbar > ul {
+        display: block;
+    }
+
+    
+}   

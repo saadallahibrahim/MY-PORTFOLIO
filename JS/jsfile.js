@@ -101,14 +101,11 @@ ScrollReveal().reveal('.details', {
 
 // the navbar for media query
 
-var navbar = document.getElementById("landing");
+var navLinks = document.getElementById("navLinks");
 
     function showMenu(){
         navLinks.style.left = "0";
     }
-
-var navLinks = document.getElementById("navLinks");
-
     function hideMenu(){
         navLinks.style.left = "-300px";
     }
