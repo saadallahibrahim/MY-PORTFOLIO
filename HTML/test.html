@@ -19,30 +19,12 @@
             padding: 20px;
         }
 
-        .headings h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-
-        .headings h2 {
-            margin: 10px 0;
-            font-size: 24px;
-        }
-
-        .navbars {
-            display: none; /* Initially hide the navbars */
-        }
-
-        .navbars.active {
-            display: block; /* Show the navbars when active */
-        }
-
         .navbar {
             overflow: hidden;
             background-color: #333;
         }
 
-        .navbar i.fa-bars {
+        .navbar i {
             float: left;
             cursor: pointer;
             color: white;
@@ -56,6 +38,11 @@
             padding: 0;
             overflow: hidden;
             background-color: #333;
+            display: none; /* Initially hide the navigation links */
+        }
+
+        .navbar ul.active {
+            display: block; /* Show the navigation links when active */
         }
 
         .navbar li {
@@ -70,50 +57,14 @@
             text-decoration: none;
         }
 
-        .icons {
-            text-align: center;
-        }
-
-        .icons a {
-            display: inline-block;
-            margin: 0 10px;
-            color: #333;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-        }
-
         /* Media query for mobile responsiveness */
         @media screen and (max-width: 768px) {
-            .headings h1 {
-                font-size: 28px;
-            }
-
-            .headings h2 {
-                font-size: 20px;
-            }
-
-            .navbar i.fa-bars {
-                display: block; /* Show the menu icon */
-            }
-
-            .navbar ul {
-                display: none; /* Hide the navigation links */
+            .navbar i.fa-times {
+                display: none; /* Hide the close icon by default */
             }
 
             .navbar ul.active {
-                display: block; /* Show the navigation links when active */
-            }
-
-            .navbar li {
-                float: none;
-            }
-
-            .navbar li a {
-                display: block;
-                text-align: left;
+                display: none; /* Hide the navigation links by default */
             }
         }
     </style>
@@ -121,14 +72,11 @@
 <body>
     <section class="landing">
         <div class="container">
-            <div class="headings">
-                <h1>ibrahim-Saad</h1>
-                <h2>the untypical <span>developer.</span></h2>
-            </div>
             <div class="navbars">
-                <div class="navbar">
-                    <i class="fa fa-bars" aria-hidden="true" onclick="toggleMenu()"></i>
-                    <ul>
+                <div class="navbar" id="navLinks">
+                    <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+                    <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+                    <ul id="yourTarget">
                         <li><a href="index.html">home</a></li>
                         <li><a href="about.html">about</a></li>
                         <li><a href="resume.html">resume</a></li>
@@ -138,22 +86,20 @@
                     </ul>
                 </div>
             </div>
-            <div class="icons">
-                <a href=""><i class="fa fa-github" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            </div>
-        </div>
-        <div class="footer">
-            designed by <span>ibrahim-Saad</span>
         </div>
     </section>
+
     <script>
-        // Function to toggle the mobile menu
-        function toggleMenu() {
-            var navbar = document.querySelector('.navbars');
-            navbar.classList.toggle('active');
+        // Function to show the mobile menu
+        function showMenu() {
+            var navLinks = document.getElementById("navLinks");
+            navLinks.classList.add("active");
+        }
+
+        // Function to hide the mobile menu
+        function hideMenu() {
+            var navLinks = document.getElementById("navLinks");
+            navLinks.classList.remove("active");
         }
     </script>
 </body>

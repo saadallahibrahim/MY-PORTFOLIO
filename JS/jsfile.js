@@ -98,3 +98,24 @@ ScrollReveal().reveal('.details', {
     scale: 0.8
 });
 
+
+// the navbar for media query
+
+var navbar = document.getElementById("landing");
+
+    function showMenu(){
+        navLinks.style.left = "0";
+    }
+
+var navLinks = document.getElementById("navLinks");
+
+    function hideMenu(){
+        navLinks.style.left = "-300px";
+    }
+
+    var targetElement = document.getElementById("yourTarget");
+    if (targetElement) {
+        targetElement.addEventListener("click", hideMenu);
+    }
+   
+

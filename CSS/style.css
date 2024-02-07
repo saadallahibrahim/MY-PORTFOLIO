@@ -224,31 +224,36 @@ html{
 
     .landing{
         width: 100%;
-        display: flex;
+        display: inline-block;
         justify-content: center;
         align-items: center;
     }
+
     .landing > .container{
-        width: 60%;
-        height: 20vh;
+        margin: 60% auto;
+        width: 90%;
+        min-height: 20px;
+        
     }
 
+    .landing > .container > .headings{
+        width: 100%;
+    }
 
     .landing > .container > .headings h1 {
+        font-size: 28px;
+    }
+
+    .landing > .container > .headings > h2 {
         font-size: 15px;
     }
 
-    .landing > .container > .headings > .headings h2 {
-        font-size: 15px;
-    }
-
-    .landing > i.fa-bars {
+    .landing > .fa {
         display: block;
         font-size: 1.2rem;
         color: white;
         text-align: right;
-        margin: 10px 20px;
-
+        margin: 15px 20px;
     }
 
     .landing > .container > .navbars > .navbar{
@@ -265,18 +270,14 @@ html{
         background: rgb(21, 19, 19);    
         box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.5);
         transition: 0.5s;
-        display: inline-block;
-    }
-    .navbar ul.active {
-        display: block; /* Show the navigation links when active */
+        /* display: block; */
     }
 
-    .navbar li {
-        float: none;
-    }
 
-    .navbar li a {
-        display: block;
-        text-align: left;
-    }
-}
+    .landing > .container > .icons {
+        width: 100%;
+   }
+   .landing > .footer{
+    text-align: center;
+   }
+}   
