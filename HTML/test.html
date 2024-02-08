@@ -7,100 +7,70 @@
     <!-- Add Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        /* General styles */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
+        /* CSS styles for navbar */
         .navbar {
-            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: -300px; /* Initially hide the navbar off-screen */
+            transition: left 0.3s ease;
             background-color: #333;
-        }
-
-        .navbar i {
-            float: left;
-            cursor: pointer;
             color: white;
-            font-size: 24px;
-            padding: 10px 15px;
+            width: 250px;
+            height: 100%;
+            padding-top: 50px; /* Adjust according to your design */
         }
 
         .navbar ul {
             list-style-type: none;
-            margin: 0;
             padding: 0;
-            overflow: hidden;
-            background-color: #333;
-            display: none; /* Initially hide the navigation links */
-        }
-
-        .navbar ul.active {
-            display: block; /* Show the navigation links when active */
+            margin: 0;
         }
 
         .navbar li {
-            float: left;
+            padding: 10px;
         }
 
-        .navbar li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
+        .navbar a {
             text-decoration: none;
-        }
-
-        /* Media query for mobile responsiveness */
-        @media screen and (max-width: 768px) {
-            .navbar i.fa-times {
-                display: none; /* Hide the close icon by default */
-            }
-
-            .navbar ul.active {
-                display: none; /* Hide the navigation links by default */
-            }
+            color: white;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
     <section class="landing">
-        <div class="container">
-            <div class="navbars">
-                <div class="navbar" id="navLinks">
-                    <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
-                    <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
-                    <ul id="yourTarget">
-                        <li><a href="index.html">home</a></li>
-                        <li><a href="about.html">about</a></li>
-                        <li><a href="resume.html">resume</a></li>
-                        <li><a href="Services.html">service</a></li>
-                        <li><a href="portfolio.html">portfolio</a></li>
-                        <li><a href="contact.html">contact</a></li>
-                    </ul>
-                </div>
-            </div>
+        <div class="navbar" id="navLinks">
+            <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+            <ul id="yourTarget">
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="resume.html">resume</a></li>
+                <li><a href="Services.html">service</a></li>
+                <li><a href="portfolio.html">portfolio</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
         </div>
     </section>
 
     <script>
+        var navLinks = document.getElementById("navLinks");
+
         // Function to show the mobile menu
         function showMenu() {
-            var navLinks = document.getElementById("navLinks");
-            navLinks.classList.add("active");
+            navLinks.style.left = "0";
         }
 
         // Function to hide the mobile menu
         function hideMenu() {
-            var navLinks = document.getElementById("navLinks");
-            navLinks.classList.remove("active");
+            navLinks.style.left = "-300px";
         }
+
+        // Event listener to hide the menu when clicking outside the navbar
+        document.body.addEventListener("click", function(event) {
+            if (!navLinks.contains(event.target) && event.target.getAttribute('id') !== 'navLinks') { // Check if the clicked element is not within the navbar
+                hideMenu();
+            }
+        });
     </script>
 </body>
 </html>

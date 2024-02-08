@@ -324,7 +324,7 @@ h3 > .line{
     }
     .header > .navbar > .fa{
         color: var(--color);
-        font-size: 21px;
+        font-size: 1.3rem;
         float: right;
         margin: 10px 20px;
     }
@@ -364,11 +364,6 @@ h3 > .line{
         margin-top: 22%;
         padding: 1% 5%;
     }
-
-    .header > .navbar > ul li{
-        margin-top: 5%;
-    }
-
 
     
     
