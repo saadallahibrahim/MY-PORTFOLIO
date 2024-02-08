@@ -50,7 +50,7 @@
       <!-- 
         the landing start here
        -->
-       <!-- <section class="landing">
+       <section class="landing">
         <div class="about-container">
             <div class="headings">
                 <h3>about <span class="line"></span></h3>
@@ -68,13 +68,13 @@
                             <h1>who is ibrahim-Saad?</h1>
                             <p>I am passionate about building successful web applications and softwares for businesses, brands and organizations. Bringing their ideas into reality using codes. 
                                 I am open to senior level roles as a software developer using any of the technologies stated in the skills sections.</p>
+                        </div>
 
-                            <div class="contact">
-                                <ul>
-                                    <li><i class="fa fa-phone" aria-hidden="true"></i> <strong>phone:</strong> +234 8169278095</li>
-                                    <li><i class="fa fa-envelope" aria-hidden="true"></i><strong>email:</strong> saadallahibrahhim11@gmail.com</li>
-                                </ul>
-                            </div>
+                        <div class="contact">
+                            <ul>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i> <strong>phone:</strong> +234 8169278095</li>
+                                <li><i class="fa fa-envelope" aria-hidden="true"></i><strong>email:</strong> saadallahibrahhim11@gmail.com</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -88,6 +88,18 @@
                 <div class="the-skills">
                     <div class="progress">
                         <div class="skill">
+                            <div class="skill-name">PHP</div>
+                            <div class="progress-bar" id="phpBar"></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">JavaScript</div>
+                            <div class="progress-bar" id="jsBar"></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">MySQL</div>
+                            <div class="progress-bar" id="mysqlBar"></div>
+                        </div>
+                        <div class="skill">
                             <div class="skill-name">HTML</div>
                             <div class="progress-bar" id="htmlBar"></div>
                         </div>
@@ -96,18 +108,7 @@
                             <div class="skill-name">CSS</div>
                             <div class="progress-bar" id="cssBar"></div>
                         </div>
-                        <div class="skill">
-                            <div class="skill-name">JavaScript</div>
-                            <div class="progress-bar" id="jsBar"></div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill-name">PHP</div>
-                            <div class="progress-bar" id="phpBar"></div>
-                        </div>
-                        <div class="skill">
-                            <div class="skill-name">MySQL</div>
-                            <div class="progress-bar" id="mysqlBar"></div>
-                        </div>
+                    
                     </div>
 
                 </div>
@@ -116,7 +117,7 @@
     </div>
 
 </section>
- -->
+
 
 
        <!-- 
@@ -153,11 +154,11 @@ function animateProgressBar(barId, percentage) {
     }
 }
 
-animateProgressBar("htmlBar", 90);
-animateProgressBar("cssBar", 85);
-animateProgressBar("jsBar", 80);
-animateProgressBar("phpBar", 75);
-animateProgressBar("mysqlBar", 70);
+animateProgressBar("htmlBar", 99);
+animateProgressBar("cssBar", 95);
+animateProgressBar("jsBar", 75);
+animateProgressBar("phpBar", 70);
+animateProgressBar("mysqlBar", 65);
 
 
 
@@ -194,15 +195,6 @@ ScrollReveal().reveal('.skill', {
 });
 
 
-
-// var navLinks = document.getElementById("navLinks");
-
-//     function showMenu(){
-//         navLinks.style.left = "0";
-//     }
-//     function hideMenu(){
-//         navLinks.style.left = "-300px";
-//     }
 
 
 var navLinks = document.getElementById("navLinks");

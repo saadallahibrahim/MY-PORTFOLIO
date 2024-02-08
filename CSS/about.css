@@ -310,21 +310,34 @@ h3 > .line{
 @media only screen and (max-width: 768px){
     
 
-    .header{
+    /* .header{
         width: 100%;
         display: flex;
         justify-content: space-between;
-        padding: 2% 3%;
-        position: fixed;
+        padding: 3% 4%;
+        position: sticky;
         background: black;
-    }
+        z-index: 100;
+    } */
 
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 2% 10%;
+         /* Make the header fixed */
+        background: black;
+        position: fixed;
+        z-index: 100;
+    }
+    
     .header > .fa{
         color: var(--color);
+        font-size: 1.3rem;
     }
     .header > .navbar > .fa{
         color: var(--color);
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         float: right;
         margin: 10px 20px;
     }
@@ -341,17 +354,19 @@ h3 > .line{
         transition: 0.5s;
         display: inline-block;
     } */
-.header > .navbar{
-    overflow: hidden;
-    background-color: #333;
-    position: fixed; /* or "absolute" depending on your layout */
-    top: 0;
-    left: -300px; /* initially hide the menu off-screen */
-    transition: left 0.3s ease; /* smooth transition when showing/hiding */
-    z-index: 1000; /* ensure it's above other content */
-    width: 250px; /* adjust according to your design */
-    height: 100%;
-}
+
+
+    .header > .navbar{
+        overflow: hidden;
+        background-color: black;
+        position: fixed; /* or "absolute" depending on your layout */
+        top: 0;
+        left: -300px; /* initially hide the menu off-screen */
+        transition: left 0.3s ease; /* smooth transition when showing/hiding */
+        z-index: 1000; /* ensure it's above other content */
+        width: 250px; /* adjust according to your design */
+        height: 100%;
+    }
     .header > .headings{
         width: 50%;
     }
@@ -359,12 +374,91 @@ h3 > .line{
         font-size: 15px;
     }
 
+    /* h3 > .line{
+        width: 20%;
+        height: 2px;
+    } */
+
     .header > .navbar > ul{
         display: block;
         margin-top: 22%;
         padding: 1% 5%;
     }
 
+    .header > .navbar > ul > li{
+        margin-top: 5%;
+    }
+
+    .landing,
+    .landing > .about-container,
+    .landing > .about-container > .skills,
+    .landing > .about-container > .skills > .headings,
+    .landing > .about-container > .content,
+    .landing > .about-container > .content > .content2,
+    .landing > .about-container > .content > .content2 > .content3 > .content4,
+    .landing > .about-container > .content > .content2 > .content3 > .contact 
+    {
+        width: 100%;
+    }
+
     
-    
+    .landing > .about-container{
+        margin-top: 20%;
+    }
+
+    .landing > .about-container > .headings > h3{
+        font-size: 15px;
+        width: 100%;
+    }
+    .landing > .about-container > .headings > h1{
+        font-size: 20px;
+        margin-bottom: 5%;
+    }
+
+    .landing > .about-container > .content > .content2 > .content3{
+        display: block;
+    }
+
+    .landing > .about-container > .content > .content2 > .content3 > .image > img{
+        width: 15rem;
+        height: 19rem;
+        margin-bottom: 5%;
+    }
+
+    .landing > .about-container > .content > .content2 > .content3 > .content4{
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    .landing > .about-container > .content > .content2 > .content3 > .content4 > h1{
+        font-size: 20px;
+    }
+
+    .landing > .about-container > .content > .content2 > .content3 > .content4 > p{
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .landing > .about-container > .content > .content2 > .content3 > .contact > ul li {
+        font-size: 15px;
+    }
+
+    .landing > .about-container > .skills > .headings > h3{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .landing > .about-container > .skills > .the-skills{
+        width: 100%;
+        display: block;
+    }
+    .landing > .about-container > .skills > .the-skills > .progress{
+        width: 100%;
+    }
+    .landing > .about-container > .skills > .the-skills > .progress > .skill{
+        width: 100%;
+    }
+    .landing > .about-container > .skills > .the-skills > .progress > .skill > .skill-name{
+        font-size: 12px;
+    }
 }   
