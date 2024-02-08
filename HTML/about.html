@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal"></script>
+    
 </head>
 <body>
 
@@ -23,13 +24,13 @@
      -->
     
     <section class="header">
-            <!-- <div class="headings">
+            <div class="headings">
                 <h1>ibrahim-Saad</h1>
-            </div> -->
+            </div>
 
             <div class="navbar" id="navLinks">
                 <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
-                <ul>
+                <ul id="yourTarget">
                     <li><a href="index.html">home</a></li>
                     <li><a href="about.html">about</a></li>
                     <li><a href="resume.html">resume</a></li>
@@ -122,25 +123,113 @@
         the landing ends
         -->
 
-        <script src="../JS/jsfile.js"></script>
 
         <script>
-            var navLinks = document.getElementById("navLinks");
 
-function showMenu(){
+const currentLocation = location.href;
+const menuItem = document.querySelectorAll(".navbar ul a");
+const menuLength = menuItem.length;
+
+for(var i = 0; i < menuLength; i++) {
+    if(menuItem[i].href === currentLocation){
+        menuItem[i].className = "active";
+    }
+}
+
+
+
+function animateProgressBar(barId, percentage) {
+    var bar = document.getElementById(barId);
+    var width = 0;
+    var id = setInterval(frame, 10);
+    function frame() {
+        if (width >= percentage) {
+            clearInterval(id);
+        } else {
+            width++;
+            bar.style.width = width + "%";
+            bar.innerHTML = width + "%";
+        }
+    }
+}
+
+animateProgressBar("htmlBar", 90);
+animateProgressBar("cssBar", 85);
+animateProgressBar("jsBar", 80);
+animateProgressBar("phpBar", 75);
+animateProgressBar("mysqlBar", 70);
+
+
+
+// scrollReveal 
+
+ScrollReveal().reveal('.headings', {
+    duration: 700,
+    delay: 200,
+    easing: 'ease-in-out',
+    origin: 'top',
+    distance: '50px',
+    opacity: 0,
+    scale: 0.8
+});
+
+ScrollReveal().reveal('.navbar', {
+    duration: 800,
+    delay: 250,
+    easing: 'ease-in-out',
+    origin: 'left',
+    distance: '50px',
+    opacity: 0,
+    scale: 0.8
+});
+
+ScrollReveal().reveal('.skill', {
+    duration: 800,
+    delay: 300,
+    easing: 'ease-in-out',
+    origin: 'top',
+    distance: '40px',
+    opacity: 0,
+    scale: 0.8
+});
+
+
+
+// var navLinks = document.getElementById("navLinks");
+
+//     function showMenu(){
+//         navLinks.style.left = "0";
+//     }
+//     function hideMenu(){
+//         navLinks.style.left = "-300px";
+//     }
+
+
+var navLinks = document.getElementById("navLinks");
+
+function showMenu() {
     navLinks.style.left = "0";
+    navLinks.classList.add("active"); // Add the "active" class to handle the display
 }
-function hideMenu(){
+
+function hideMenu() {
     navLinks.style.left = "-300px";
+    navLinks.classList.remove("active"); // Remove the "active" class
 }
+
+
 
 var targetElement = document.getElementById("yourTarget");
-if (targetElement) {
-    targetElement.addEventListener("click", hideMenu);
-}
+        if (targetElement) {
+            targetElement.addEventListener("click", hideMenu);
+        }
 
 
         </script>
+        
+<!-- 
+<script src="../JS/jsfile.js"></script>
+<script src="../JS/mobile.js"></script> -->
     
 </body>
 </html>

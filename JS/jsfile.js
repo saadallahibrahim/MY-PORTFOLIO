@@ -101,18 +101,36 @@ ScrollReveal().reveal('.details', {
 
 // the navbar for media query
 
+// var navLinks = document.getElementById("navLinks");
+
+//     function showMenu(){
+//         navLinks.style.left = "0";
+//     }
+//     function hideMenu(){
+//         navLinks.style.left = "-300px";
+//     }
+
+//     var targetElement = document.getElementById("yourTarget");
+//     if (targetElement) {
+//         targetElement.addEventListener("click", hideMenu);
+//     }
+
+
 var navLinks = document.getElementById("navLinks");
 
-    function showMenu(){
-        navLinks.style.left = "0";
-    }
-    function hideMenu(){
-        navLinks.style.left = "-300px";
-    }
+function showMenu() {
+    navLinks.style.left = "0";
+    navLinks.classList.add("active"); // Add the "active" class to handle the display
+}
 
-    var targetElement = document.getElementById("yourTarget");
-    if (targetElement) {
-        targetElement.addEventListener("click", hideMenu);
-    }
+function hideMenu() {
+    navLinks.style.left = "-300px";
+    navLinks.classList.remove("active"); // Remove the "active" class
+}
+
+
+
+
+
    
 

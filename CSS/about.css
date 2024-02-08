@@ -314,12 +314,22 @@ h3 > .line{
         width: 100%;
         display: flex;
         justify-content: space-between;
-        padding: 1% 1%;
+        padding: 2% 3%;
         position: fixed;
-        background: var(--background-color);
+        background: black;
     }
 
-    .header > .navbar{
+    .header > .fa{
+        color: var(--color);
+    }
+    .header > .navbar > .fa{
+        color: var(--color);
+        font-size: 21px;
+        float: right;
+        margin: 10px 20px;
+    }
+
+    /* .header > .navbar{
         position: absolute;
         left: -300px;
         top: 0;
@@ -330,11 +340,36 @@ h3 > .line{
         box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.5);
         transition: 0.5s;
         display: inline-block;
+    } */
+.header > .navbar{
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* or "absolute" depending on your layout */
+    top: 0;
+    left: -300px; /* initially hide the menu off-screen */
+    transition: left 0.3s ease; /* smooth transition when showing/hiding */
+    z-index: 1000; /* ensure it's above other content */
+    width: 250px; /* adjust according to your design */
+    height: 100%;
+}
+    .header > .headings{
+        width: 50%;
+    }
+    .header > .headings > h1{
+        font-size: 15px;
     }
 
-    .header > .navbar > ul {
+    .header > .navbar > ul{
         display: block;
+        margin-top: 22%;
+        padding: 1% 5%;
     }
 
+    .header > .navbar > ul li{
+        margin-top: 5%;
+    }
+
+
+    
     
 }   
