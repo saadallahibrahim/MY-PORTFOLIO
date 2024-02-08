@@ -18,7 +18,6 @@
 </head>
 <body>
 
-
     <!-- 
         the header start here
      -->
@@ -27,7 +26,6 @@
             <div class="headings">
                 <h1>ibrahim-Saad</h1>
             </div>
-
             <div class="navbar" id="navLinks">
                 <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
                 <ul id="yourTarget">
@@ -68,13 +66,13 @@
                             <h1>who is ibrahim-Saad?</h1>
                             <p>I am passionate about building successful web applications and softwares for businesses, brands and organizations. Bringing their ideas into reality using codes. 
                                 I am open to senior level roles as a software developer using any of the technologies stated in the skills sections.</p>
-                        </div>
 
                         <div class="contact">
                             <ul>
                                 <li><i class="fa fa-phone" aria-hidden="true"></i> <strong>phone:</strong> +234 8169278095</li>
                                 <li><i class="fa fa-envelope" aria-hidden="true"></i><strong>email:</strong> saadallahibrahhim11@gmail.com</li>
                             </ul>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -88,29 +86,28 @@
                 <div class="the-skills">
                     <div class="progress">
                         <div class="skill">
-                            <div class="skill-name">PHP</div>
-                            <div class="progress-bar" id="phpBar"></div>
+                            <div class="skill-name">HTML</div>
+                            <div class="progress-bar" id="htmlBar"></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">CSS</div>
+                            <div class="progress-bar" id="cssBar"></div>
                         </div>
                         <div class="skill">
                             <div class="skill-name">JavaScript</div>
                             <div class="progress-bar" id="jsBar"></div>
                         </div>
                         <div class="skill">
+                            <div class="skill-name">PHP</div>
+                            <div class="progress-bar" id="phpBar"></div>
+                        </div>
+                        
+                        <div class="skill">
                             <div class="skill-name">MySQL</div>
                             <div class="progress-bar" id="mysqlBar"></div>
                         </div>
-                        <div class="skill">
-                            <div class="skill-name">HTML</div>
-                            <div class="progress-bar" id="htmlBar"></div>
-                        </div>
-                    
-                        <div class="skill">
-                            <div class="skill-name">CSS</div>
-                            <div class="progress-bar" id="cssBar"></div>
-                        </div>
-                    
+                        
                     </div>
-
                 </div>
             </div>   
         </div>
@@ -138,7 +135,6 @@ for(var i = 0; i < menuLength; i++) {
 }
 
 
-
 function animateProgressBar(barId, percentage) {
     var bar = document.getElementById(barId);
     var width = 0;
@@ -157,12 +153,12 @@ function animateProgressBar(barId, percentage) {
 animateProgressBar("htmlBar", 99);
 animateProgressBar("cssBar", 95);
 animateProgressBar("jsBar", 75);
-animateProgressBar("phpBar", 70);
-animateProgressBar("mysqlBar", 65);
+animateProgressBar("phpBar", 80);
+animateProgressBar("mysqlBar", 75);
 
 
 
-// scrollReveal 
+// scrollReveal on about
 
 ScrollReveal().reveal('.headings', {
     duration: 700,
@@ -174,6 +170,8 @@ ScrollReveal().reveal('.headings', {
     scale: 0.8
 });
 
+// navbar scrollreveal
+
 ScrollReveal().reveal('.navbar', {
     duration: 800,
     delay: 250,
@@ -183,6 +181,8 @@ ScrollReveal().reveal('.navbar', {
     opacity: 0,
     scale: 0.8
 });
+
+// skill scrollreveal
 
 ScrollReveal().reveal('.skill', {
     duration: 800,
@@ -196,7 +196,7 @@ ScrollReveal().reveal('.skill', {
 
 
 
-
+// show menu section for media query
 var navLinks = document.getElementById("navLinks");
 
 function showMenu() {
@@ -208,8 +208,6 @@ function hideMenu() {
     navLinks.style.left = "-300px";
     navLinks.classList.remove("active"); // Remove the "active" class
 }
-
-
 
 var targetElement = document.getElementById("yourTarget");
         if (targetElement) {

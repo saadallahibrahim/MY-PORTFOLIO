@@ -193,8 +193,70 @@
           -->
 
 
+          <script>
+
+            const currentLocation = location.href;
+            const menuItem = document.querySelectorAll(".navbar ul a");
+            const menuLength = menuItem.length;
+            
+            for(var i = 0; i < menuLength; i++) {
+                if(menuItem[i].href === currentLocation){
+                    menuItem[i].className = "active";
+                }
+            }
+            
+            
+   
+            // scroll Reveal on the resume
+
+            ScrollReveal().reveal('.headings', {
+                duration: 700,
+                delay: 200,
+                easing: 'ease-in-out',
+                origin: 'top',
+                distance: '50px',
+                opacity: 0,
+                scale: 0.8
+            });
+
+            ScrollReveal().reveal('.details', {
+                duration: 800,
+                delay: 200,
+                easing: 'ease-in-out',
+                origin: 'buttom',
+                distance: '30px',
+                opacity: 0,
+                scale: 0.8
+            });
+
+            
+        
+            // show menu section for media query
+            var navLinks = document.getElementById("navLinks");
+            
+            function showMenu() {
+                navLinks.style.left = "0";
+                navLinks.classList.add("active"); // Add the "active" class to handle the display
+            }
+            
+            function hideMenu() {
+                navLinks.style.left = "-300px";
+                navLinks.classList.remove("active"); // Remove the "active" class
+            }
+            
+            var targetElement = document.getElementById("yourTarget");
+                    if (targetElement) {
+                        targetElement.addEventListener("click", hideMenu);
+                    }
+            
+            
+            </script>
+
+
 
           <script src="../JS/jsfile.js"></script>
+
+
     
 </body>
 </html>

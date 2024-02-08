@@ -153,7 +153,7 @@ h3 > .line{
 
 .landing > .about-container > .content > .content2 > .content3{
     width: 100%;
-    display: inline-flex;
+    display: flex;
 }
 
 
@@ -439,7 +439,10 @@ h3 > .line{
         width: 100%;
     }
 
-    .landing > .about-container > .content > .content2 > .content3 > .contact > ul li {
+    .landing > .about-container > .content > .content2 > .content3 > .content4 > .contact{
+        width: 100%;
+    }
+    .landing > .about-container > .content > .content2 > .content3 > .content4 > .contact > ul li{
         font-size: 15px;
     }
 
