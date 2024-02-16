@@ -28,8 +28,9 @@
                 <h1>ibrahim-Saad</h1>
             </div>
 
-            <div class="navbar">
-                <ul>
+            <div class="navbar" id="navLinks">
+                <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+                <ul id="yourTarget">
                     <li><a href="index.html">home</a></li>
                     <li><a href="about.html">about</a></li>
                     <li><a href="resume.html">resume</a></li>
@@ -38,6 +39,7 @@
                     <li><a href="contact.html">contact</a></li>
                 </ul>
             </div>
+            <i class="fa fa-align-justify" aria-hidden="true" onclick="showMenu()"></i>
      </section>
 
      <!-- 
@@ -206,9 +208,31 @@
             }
             
             
-   
-            // scroll Reveal on the resume
-
+            function animateProgressBar(barId, percentage) {
+                var bar = document.getElementById(barId);
+                var width = 0;
+                var id = setInterval(frame, 10);
+                function frame() {
+                    if (width >= percentage) {
+                        clearInterval(id);
+                    } else {
+                        width++;
+                        bar.style.width = width + "%";
+                        bar.innerHTML = width + "%";
+                    }
+                }
+            }
+            
+            animateProgressBar("htmlBar", 99);
+            animateProgressBar("cssBar", 95);
+            animateProgressBar("jsBar", 75);
+            animateProgressBar("phpBar", 80);
+            animateProgressBar("mysqlBar", 75);
+            
+            
+            
+            // scrollReveal on about
+            
             ScrollReveal().reveal('.headings', {
                 duration: 700,
                 delay: 200,
@@ -218,19 +242,33 @@
                 opacity: 0,
                 scale: 0.8
             });
-
-            ScrollReveal().reveal('.details', {
+            
+            // navbar scrollreveal
+            
+            ScrollReveal().reveal('.navbar', {
                 duration: 800,
-                delay: 200,
+                delay: 250,
                 easing: 'ease-in-out',
-                origin: 'buttom',
-                distance: '30px',
+                origin: 'left',
+                distance: '50px',
                 opacity: 0,
                 scale: 0.8
             });
-
             
-        
+            // skill scrollreveal
+            
+            ScrollReveal().reveal('.skill', {
+                duration: 800,
+                delay: 300,
+                easing: 'ease-in-out',
+                origin: 'top',
+                distance: '40px',
+                opacity: 0,
+                scale: 0.8
+            });
+            
+            
+            
             // show menu section for media query
             var navLinks = document.getElementById("navLinks");
             
@@ -252,9 +290,7 @@
             
             </script>
 
-
-
-          <script src="../JS/jsfile.js"></script>
+          <!-- <script src="../JS/jsfile.js"></script> -->
 
 
     

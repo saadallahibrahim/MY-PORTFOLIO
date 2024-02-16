@@ -92,6 +92,11 @@ html{
     font-family: sans-serif;
 }
 
+.header > .fa,
+.header > .navbar > .fa{
+    display: none;
+}
+
 /* the header ends here */
 
 
@@ -313,3 +318,124 @@ h3 > .line{
 }
 
 /* the landing ends here */
+
+
+/* the media query start here */
+
+@media only screen and (max-width: 768px){
+
+
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 2% 3%;
+         /* Make the header fixed */
+        background: black;
+        position: fixed;
+        z-index: 100;
+    }
+
+    .header > .headings > h1{
+        font-size: 19px;
+    }
+    .header > .fa{
+        display: block;
+        color: var(--color);
+        font-size: 1.3rem;
+        margin: 5px 5px;
+    }
+
+    .header > .navbar{
+        overflow: hidden;
+        background-color: black;
+        position: fixed; /* or "absolute" depending on your layout */
+        top: 0;
+        left: -300px; /* initially hide the menu off-screen */
+        transition: left 0.3s ease; /* smooth transition when showing/hiding */
+        z-index: 1000; /* ensure it's above other content */
+        width: 250px; /* adjust according to your design */
+        height: 100%;
+    }
+
+    .header > .headings{
+        width: 50%;
+    }
+
+    .header > .navbar > ul{
+        display: block;
+        margin-top: 22%;
+        padding: 1% 5%;
+    }
+
+    .header > .navbar > ul > li{
+        margin-top: 5%;
+    }
+
+    .landing{
+        width: 100%;
+        padding: 1% 2%;
+        height: 410vh;
+    }
+
+    .landing > .about-container{
+        width: 100%;
+        margin-top: 20%;
+        height: 395vh;
+    }
+
+    .landing > .about-container > .headings > h3{
+        font-size: 15px;
+        width: 100%;
+    }
+    .landing > .about-container > .headings > h1{
+        font-size: 20px;
+        margin-bottom: 5%;
+    }
+
+    .landing > .about-container > .content-container{
+        display: block;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .landing > .about-container > .content-container > .content1 > .sum > h3{
+        font-size: 15px;
+    }
+
+    .landing > .about-container > .content-container > .content1{
+        width: 100%;
+    }
+    .landing > .about-container > .content-container > .content2
+    {
+        width: 100%;
+        margin-top: 245%;
+    }
+
+    .content-container > .content1 > .sum > .details > h4,
+    .content-container > .content2 > .sum > .details > h4
+    {
+        width: 100%;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .content-container > .content1 > .sum > .details > h2,
+    .content-container > .content2 > .sum > .details > h2
+    {
+        width: 60%;
+        padding: 10px;
+        font-size: 12px;
+    }
+    .content-container > .content1 > .sum > .details > p{
+        font-size: 15px;
+
+    }
+
+    .content-container > .content1 > .sum > .details > ul > li,
+    .content-container > .content2 > .sum > .details > ul > li
+    {
+        font-size: 15px;
+
+    }
+
+}

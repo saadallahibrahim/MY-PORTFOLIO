@@ -310,22 +310,11 @@ h3 > .line{
 @media only screen and (max-width: 768px){
     
 
-    /* .header{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding: 3% 4%;
-        position: sticky;
-        background: black;
-        z-index: 100;
-    } */
-
     .header {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        padding: 2% 10%;
-         /* Make the header fixed */
+        padding: 2% 3%;
         background: black;
         position: fixed;
         z-index: 100;
@@ -334,6 +323,7 @@ h3 > .line{
     .header > .fa{
         color: var(--color);
         font-size: 1.3rem;
+        margin: 5px 5px;
     }
     .header > .navbar > .fa{
         color: var(--color);
@@ -341,20 +331,6 @@ h3 > .line{
         float: right;
         margin: 10px 20px;
     }
-
-    /* .header > .navbar{
-        position: absolute;
-        left: -300px;
-        top: 0;
-        width: 250px;
-        height: 100vh;
-        z-index: 999;
-        background: rgb(21, 19, 19);    
-        box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.5);
-        transition: 0.5s;
-        display: inline-block;
-    } */
-
 
     .header > .navbar{
         overflow: hidden;
@@ -371,13 +347,9 @@ h3 > .line{
         width: 50%;
     }
     .header > .headings > h1{
-        font-size: 15px;
+        font-size: 19px;
     }
 
-    /* h3 > .line{
-        width: 20%;
-        height: 2px;
-    } */
 
     .header > .navbar > ul{
         display: block;
@@ -400,7 +372,9 @@ h3 > .line{
     {
         width: 100%;
     }
-
+    .landing{
+        padding: 1% 2%;
+    }
     
     .landing > .about-container{
         margin-top: 20%;
