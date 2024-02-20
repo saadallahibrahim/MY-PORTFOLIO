@@ -345,6 +345,13 @@ h3 > .line{
         font-size: 1.3rem;
         margin: 5px 5px;
     }
+    .header > .navbar > .fa{
+        display: block;
+        color: var(--color);
+        font-size: 1.5rem;
+        float: right;
+        margin: 10px 20px;
+    }
 
     .header > .navbar{
         overflow: hidden;
@@ -428,14 +435,12 @@ h3 > .line{
     }
     .content-container > .content1 > .sum > .details > p{
         font-size: 15px;
-
     }
 
     .content-container > .content1 > .sum > .details > ul > li,
     .content-container > .content2 > .sum > .details > ul > li
     {
         font-size: 15px;
-
     }
 
 }
