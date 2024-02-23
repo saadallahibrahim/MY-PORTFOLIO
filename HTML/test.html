@@ -3,74 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Responsive Example</title>
-    <!-- Add Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <style>
-        /* CSS styles for navbar */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: -300px; /* Initially hide the navbar off-screen */
-            transition: left 0.3s ease;
-            background-color: #333;
-            color: white;
-            width: 250px;
-            height: 100%;
-            padding-top: 50px; /* Adjust according to your design */
-        }
+        .landing > .about-container > .content{
+    width: 95%;
+    height: 80%;
+    background: transparent;
+    margin-bottom: 3%;
+    
+}
 
-        .navbar ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
+.landing > .about-container > .content > .content2 > .content3{
+    width: 100%;
+    display: flex;
+}
 
-        .navbar li {
-            padding: 10px;
-        }
 
-        .navbar a {
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-        }
+.landing > .about-container > .content > .content2 > .content3 > .image{
+    width: 33%;
+    height: 50%;
+    background-color: transparent;
+    margin-right: 4%;
+}
+.landing > .about-container > .content > .content2 > .content3 > .image > img{
+    width: 300px;
+    height: 300px;
+}
+
+.about-container > .content > .content2 > .content3 > .content4{
+    width: 100%;
+    background-color: transparent;
+    
+}
+
+.about-container > .content > .content2 > .content3 > .content4 h1{
+    font-family: var(--fontfamily);
+    font-size: var(--fontsize2);
+    text-transform: var(--text-transform);
+    font-weight: var(--font-weight);
+    color: var(--background-color);
+    margin-bottom: 1%;
+}
+
+.about-container > .content > .content2 > .content3 > .content4 p{
+    color: white;
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.about-container > .content > .content2 > .content3 > .content4 > .contact{
+    width: 90%;
+    background: transparent;
+    margin-top: 3%;
+}
+.contact > ul{
+    list-style: none;
+}
+.contact > ul > li{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 5%;
+    text-transform: var(--text-transform);
+}
+.contact > ul > li>.fa{
+    color: var(--background-color);
+    margin-right: 2%;
+}
+.contact > ul > li > strong{
+    color: var(--background-color);
+}
     </style>
 </head>
 <body>
-    <section class="landing">
-        <div class="navbar" id="navLinks">
-            <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
-            <ul id="yourTarget">
-                <li><a href="index.html">home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="resume.html">resume</a></li>
-                <li><a href="Services.html">service</a></li>
-                <li><a href="portfolio.html">portfolio</a></li>
-                <li><a href="contact.html">contact</a></li>
-            </ul>
+
+    <div class="content">
+        <div class="content2">
+            <div class="content3">
+                <div class="image">
+                    <img src="../IMAGES/mypics.jpg" alt="">
+                </div>
+
+                <div class="content4">
+                    <h1>who is ibrahim-Saad?</h1>
+                    <p>I am passionate about building successful web applications and softwares for businesses, brands and organizations. Bringing their ideas into reality using codes. 
+                        I am open to senior level roles as a software developer using any of the technologies stated in the skills sections.</p>
+
+                <div class="contact">
+                    <ul>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i> <strong>phone:</strong> +234 8169278095</li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><strong>email:</strong> saadallahibrahhim11@gmail.com</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+    
 
     <script>
-        var navLinks = document.getElementById("navLinks");
+        // Initialize ScrollReveal
+ScrollReveal().reveal('.image', {
+    delay: 200,
+    origin: 'left',
+    distance: '50px',
+    duration: 1000,
+    easing: 'ease-in-out',
+    opacity: 0,
+    scale: 0.8
+});
 
-        // Function to show the mobile menu
-        function showMenu() {
-            navLinks.style.left = "0";
-        }
+ScrollReveal().reveal('.content4', {
+    delay: 300,
+    origin: 'right',
+    distance: '50px',
+    duration: 1000,
+    easing: 'ease-in-out',
+    opacity: 0,
+    scale: 0.8
+});
 
-        // Function to hide the mobile menu
-        function hideMenu() {
-            navLinks.style.left = "-300px";
-        }
-
-        // Event listener to hide the menu when clicking outside the navbar
-        document.body.addEventListener("click", function(event) {
-            if (!navLinks.contains(event.target) && event.target.getAttribute('id') !== 'navLinks') { // Check if the clicked element is not within the navbar
-                hideMenu();
-            }
-        });
     </script>
 </body>
 </html>

@@ -239,6 +239,9 @@ html{
 
     .landing > .container > .headings{
         width: 100%;
+        margin-left: 5%;
+        margin-right: 5%;
+        transform: translate(-5% -5%);
     }
 
     .landing > .container > .headings h1 {
@@ -251,24 +254,11 @@ html{
 
     .landing > .fa {
         display: block;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         color: white;
         text-align: right;
         margin: 15px 20px;
     }
-/* 
-    .landing > .container > .navbars > .navbar{
-        position: absolute;
-        left: -300px;
-        top: 0;
-        width: 80%;
-        height: 100vh;
-        z-index: 999;
-        background: rgb(21, 19, 19);     
-        box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.5);
-        transition: 0.5s;
-        display: block;
-    } */
 
     .landing > .container > .navbars > .navbar{
         overflow: hidden;
@@ -298,10 +288,14 @@ html{
 
     .landing > .container > .navbars > .navbar ul li{
         margin: 5%;
+        font-family: var(--fontfamily);
     }
 
     .landing > .container > .icons {
         width: 100%;
+        margin-left: 10%;
+        margin-right: 10%;
+        transform: translate(-10% -10%);
    }
    .landing > .footer{
     text-align: center;

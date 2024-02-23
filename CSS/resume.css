@@ -376,7 +376,8 @@ h3 > .line{
     }
 
     .header > .navbar > ul > li{
-        margin-top: 5%;
+        margin-top: 10%;
+
     }
 
     .landing{
@@ -441,6 +442,10 @@ h3 > .line{
     .content-container > .content2 > .sum > .details > ul > li
     {
         font-size: 15px;
+    }
+
+    .footer > p{
+        text-align: center;
     }
 
 }
