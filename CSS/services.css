@@ -313,11 +313,39 @@ h3 > .line{
       margin-top: 10%;
   }
 
-  .landing,
-  .container,
-  .headings{
+  .landing{
     width: 100;
+    padding: 1% 2%;
+    min-height: 175vh;
   }
+
+  .landing > .container {
+    width: 100%;
+    min-height: 160vh;
+  }
+
+  .landing > .container > .headings{
+    width: 100%;
+
+  }
+  .landing > .container > .headings > h3{
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .landing > .container > .container2 {
+    width: 100%;
+    min-height: 50vh;
+  }
+
+  .landing > .container > .container2 > .row{
+    width: 100%;
+    height: 35%;
+  }
+
+
+
+
 
 
   .footer > p{
