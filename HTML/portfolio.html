@@ -21,23 +21,25 @@
         the header start here
      -->
     
-    <section class="header">
-        <div class="headings">
-            <h1>ibrahim-Saad</h1>
-        </div>
-
-        <div class="navbar">
-            <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="resume.html">resume</a></li>
-                <li><a href="Services.html">service</a></li>
-                <li><a href="portfolio.html">portfolio</a></li>
-                <li><a href="Contact.html">contact</a></li>
-            </ul>
-        </div>
- </section>
-
+     <section class="header">
+      <div class="headings">
+          <h1>ibrahim-Saad</h1>
+      </div>
+  
+      <div class="navbar" id="navLinks">
+          <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+          <ul id="yourTarget">
+              <li><a href="index.html">home</a></li>
+              <li><a href="about.html">about</a></li>
+              <li><a href="resume.html">resume</a></li>
+              <li><a href="Services.html">service</a></li>
+              <li><a href="portfolio.html">portfolio</a></li>
+              <li><a href="contact.html">contact</a></li>
+          </ul>
+      </div>
+      <i class="fa fa-align-justify" aria-hidden="true" onclick="showMenu()"></i>
+  </section>
+  
  <!-- 
     the header ends here
   -->
@@ -103,7 +105,82 @@
   the footer ends here
   -->
 
-  <script src="../JS/jsfile.js"></script>
+
+  <script>
+
+    const currentLocation = location.href;
+    const menuItem = document.querySelectorAll(".navbar ul a");
+    const menuLength = menuItem.length;
+    
+    for(var i = 0; i < menuLength; i++) {
+        if(menuItem[i].href === currentLocation){
+            menuItem[i].className = "active";
+        }
+    }
+    
+    
+    function animateProgressBar(barId, percentage) {
+        var bar = document.getElementById(barId);
+        var width = 0;
+        var id = setInterval(frame, 10);
+        function frame() {
+            if (width >= percentage) {
+                clearInterval(id);
+            } else {
+                width++;
+                bar.style.width = width + "%";
+                bar.innerHTML = width + "%";
+            }
+        }
+    }
+    
+    // scrollReveal on about
+    
+    ScrollReveal().reveal('.headings', {
+        duration: 700,
+        delay: 200,
+        easing: 'ease-in-out',
+        origin: 'top',
+        distance: '50px',
+        opacity: 0,
+        scale: 0.8
+    });
+    
+    // navbar scrollreveal
+    
+    ScrollReveal().reveal('.navbar', {
+        duration: 800,
+        delay: 250,
+        easing: 'ease-in-out',
+        origin: 'left',
+        distance: '50px',
+        opacity: 0,
+        scale: 0.8
+    });
+    
+    
+    // show menu section for media query
+    var navLinks = document.getElementById("navLinks");
+    
+    function showMenu() {
+        navLinks.style.left = "0";
+        navLinks.classList.add("active"); // Add the "active" class to handle the display
+    }
+    
+    function hideMenu() {
+        navLinks.style.left = "-300px";
+        navLinks.classList.remove("active"); // Remove the "active" class
+    }
+    
+    var targetElement = document.getElementById("yourTarget");
+            if (targetElement) {
+                targetElement.addEventListener("click", hideMenu);
+            }
+    
+    
+    </script>
+
+  <!-- <script src="../JS/jsfile.js"></script> -->
 
 </body>
 </html>

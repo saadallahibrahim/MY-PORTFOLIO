@@ -252,4 +252,102 @@ h3 > .line{
   
   
 
+  @media only screen and (max-width: 768px){
+
+
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 2% 3%;
+         /* Make the header fixed */
+        background: black;
+        position: fixed;
+        z-index: 100;
+    }
+  
+    .header > .headings > h1{
+        font-size: 20px;
+    }
+    .header > .fa{
+        display: block;
+        color: var(--color);
+        font-size: 1.3rem;
+        margin: 5px 5px;
+    }
+    .header > .navbar > .fa{
+        display: block;
+        color: var(--color);
+        font-size: 1.5rem;
+        float: right;
+        margin: 10px 20px;
+    }
+  
+    .header > .navbar{
+        overflow: hidden;
+        background-color: black;
+        position: fixed; /* or "absolute" depending on your layout */
+        top: 0;
+        left: -300px; /* initially hide the menu off-screen */
+        transition: left 0.3s ease; /* smooth transition when showing/hiding */
+        z-index: 1000; /* ensure it's above other content */
+        width: 250px; /* adjust according to your design */
+        height: 100%;
+    }
+
+    .header > .navbar > ul{
+        display: block;
+        margin-top: 22%;
+        padding: 1% 5%;
+    }
+  
+    .header > .navbar > ul > li{
+        margin-top: 10%;
+    }
+
+    .landing{
+        display: block;
+        width: 100%;
+        padding: 10% 2%;
+        min-height: 100vh;
+    }
+
+    .landing > .container{
+        min-height: 50vh;
+        background: white;
+        width: 100%;
+        display: block;
+    }
+
+    .landing > .container > .headings{
+        width: 100%;
+    }
+    .landing > .container > .headings > h3{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .landing > .container > .headings > h1{
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .landing > .container > .container2{
+        width: 100%;
+        display: block;
+        margin-top: 5%;
+    }
+
+    .landing > .container > .container2 > .content{
+        width: 100%;
+        display: block;
+    }
+
+    .landing > .container > .container2 > .content > .details{
+        width: 100%;
+        margin-bottom: 2%;
+    }
+  }
+
+
 
