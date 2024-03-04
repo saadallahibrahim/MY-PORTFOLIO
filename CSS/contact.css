@@ -157,6 +157,7 @@ h3 > .line{
     display: flex;
     width: 100%;
     background: transparent;
+    margin-bottom: 3%;
 }
 
 .landing > .container > .container2 > .content > .details{
@@ -186,12 +187,14 @@ h3 > .line{
     color: rgba(255, 255, 255, 0.55);
     text-transform: var(--text-transform);
     margin-top: 3%;
+    margin-bottom: 2%;
 }
 .landing > .container > .container2 > .content > .details > p{
     color: var(--color);
     text-decoration: none;
     font-family: sans-serif;
     margin-top: 2%;
+    text-transform: var(--text-transform);
 }
 .landing > .container > .container2 > .content > .details > p a{
     text-decoration: none;
@@ -269,12 +272,14 @@ h3 > .line{
     .header > .headings > h1{
         font-size: 20px;
     }
+
     .header > .fa{
         display: block;
         color: var(--color);
         font-size: 1.3rem;
         margin: 5px 5px;
     }
+
     .header > .navbar > .fa{
         display: block;
         color: var(--color);
@@ -314,7 +319,6 @@ h3 > .line{
 
     .landing > .container{
         min-height: 50vh;
-        background: white;
         width: 100%;
         display: block;
     }
@@ -322,6 +326,7 @@ h3 > .line{
     .landing > .container > .headings{
         width: 100%;
     }
+
     .landing > .container > .headings > h3{
         width: 100%;
         font-size: 15px;
@@ -345,7 +350,37 @@ h3 > .line{
 
     .landing > .container > .container2 > .content > .details{
         width: 100%;
+        margin-bottom: 11%;
+    }
+
+    .landing > .container > .container2 > .content > .details > .fa{
+        font-size: 20px;
+        padding: 13px;
+        margin-right: 3%;
+}
+
+    .landing > .container > .container2 > .content > .details > p{
+        text-transform: var(--text-transform);
+        font-size: 15px;
+    }
+
+    .landing > .container > .container2 > .content > .details > h3{
+        font-size: 15px;
+        letter-spacing: var(--letter-spacing);
         margin-bottom: 2%;
+    }
+
+    .landing > .container > .container2 > .content > .details > .icon > a{
+        margin-right: 8%;
+
+    }
+
+
+    .footer{
+        width: 100%;
+    }
+    .footer > p{
+        text-align: center;
     }
   }
 
